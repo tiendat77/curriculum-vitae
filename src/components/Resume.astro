@@ -11,8 +11,9 @@ import { Markdown } from 'astro/components';
   ### WORK EXPERIENCE
   ---
 
-  **Leanwell Technology - chuyendoisosanxuat.com**  <span style="float: right;">09/2019 - Present</span><br>
-  Front-end Developer | Angular
+  **Leanwell Technology - chuyendoisosanxuat.com**  <p class="pull-right">09/2019 - Present</p>
+
+  <p class="sub-header">Front-end Developer | Angular</p>
 
   **Responsibilities:**
   - Building user interface, data visualizations and designed overall user experience.
@@ -38,14 +39,15 @@ import { Markdown } from 'astro/components';
   ### EDUCATION
   ---
 
-  **University of Information Technology - VNUHCM**  <span style="float: right;">09/2015 - 12/2020</span><br>
-  Major: Computer Engineering
+  **University of Information Technology - VNUHCM**  <p class="pull-right">09/2015 - 12/2020</p>
 
-<br><br>
+  <p class="sub-header">Major: Computer Engineering</p>
 
-|                 |                          |                      |
-| --------------- | ------------------------ | -------------------- |
-| [+84 344 747 434](tel:+84344747434) | huynhztienzdat@gmail.com | [tiendat77@github.com](https://github.com/tiendat77) |
+  <br><br>
+
+  |                                     |                                                      |                          |
+  | ----------------------------------- | ---------------------------------------------------- | ------------------------ |
+  | [+84 344 747 434](tel:+84344747434) | [tiendat77@github.com](https://github.com/tiendat77) | huynhztienzdat@gmail.com |
 </Markdown>
 
 <style>
@@ -70,5 +72,26 @@ import { Markdown } from 'astro/components';
 
   td {
     text-align: left;
+  }
+
+  .pull-right {
+    margin: 0;
+    float: right;
+  }
+
+  .sub-header {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .pull-right {
+      display: block;
+      float: none;
+    }
+
+    td {
+      display: block;
+    }
   }
 </style>

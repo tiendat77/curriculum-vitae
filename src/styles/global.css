@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 :root {
@@ -11,18 +10,17 @@
 }
 
 body {
+  font-size: 16px;
+
+  margin: 0;
   width: 100%;
   min-height: 100vh;
-  padding: 4rem 2rem;
+
   display: grid;
   justify-content: center;
-  background: #f9fafb;
-  color: #111827;
-}
 
-@page {
-  size: A4;
-  margin: 0;
+  color: #111827;
+  background: #f9fafb;
 }
 
 @media print {
@@ -34,7 +32,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #111827;
-    color: #fff;
+    color: #adbac7;
+    background: #1d2128;
   }
 }

@@ -1,0 +1,51 @@
+page {
+  padding-top: 19mm;
+  padding-bottom: 19mm;
+  padding-left: 19mm;
+  padding-right: 19mm;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5cm;
+  margin-bottom: 0.5cm;
+}
+
+page {
+  display: block;
+  border-radius: 10px;
+
+  color: #111827;
+  background: #fff;
+  box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+page[size="A4"] {
+  width: 210mm;
+  height: 297mm;
+}
+
+page[size="A4"][layout="landscape"] {
+  width: 297mm;
+  height: 210mm;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  page {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  page {
+    color: #adbac7;
+    background: #23272e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 4px 10px 36px rgba(255, 255, 255, 0.08);
+  }
+}

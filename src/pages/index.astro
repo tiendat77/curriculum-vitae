@@ -1,7 +1,7 @@
 ---
 import Tour from '../components/Tour.astro';
 import Resume from '../components/Resume.astro';
-let title = 'Tien Dat Huynh';
+let title = 'Tien Dat Huynh Resume';
 ---
 
 <html lang="en">
@@ -13,14 +13,14 @@ let title = 'Tien Dat Huynh';
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <style global>
     @import "../styles/global.css";
-    @import "../styles/home.css";
+    @import "../styles/page.css";
   </style>
 </head>
 <body>
   <main>
-    <article class="paper">
+    <page size="A4">
       <Resume />
-    </article>
+    </page>
   </main>
 </body>
 </html>

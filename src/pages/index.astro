@@ -1,0 +1,26 @@
+---
+import Tour from '../components/Tour.astro';
+import Resume from '../components/Resume.astro';
+let title = 'Tien Dat Huynh';
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{title}</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <style global>
+    @import "../styles/global.css";
+    @import "../styles/home.css";
+  </style>
+</head>
+<body>
+  <main>
+    <article class="paper">
+      <Resume />
+    </article>
+  </main>
+</body>
+</html>

@@ -30,45 +30,11 @@ h3 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header .info, .header .contact {
-  margin-bottom: 1em;
-}
-
-.header .name {
-  margin-top: 0;
-  margin-bottom: 0.25em;
-  display: inline-block;
-}
-
-.header .position {
-  margin: 0;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.header .contact a {
-  display: block;
-  text-align: right;
-  margin-bottom: 0.25rem;
-}
-
 @media only screen and (max-width: 600px) {
-  .header {
-    display: block;
-  }
-
-  .header .contact a {
-    text-align: left;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
-  .sub-header, .position {
+  .sub-header {
     color: #adbac7 !important;
   }
 }

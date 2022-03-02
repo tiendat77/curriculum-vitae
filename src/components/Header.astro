@@ -1,0 +1,84 @@
+<section class="header">
+  <div class="left">
+    <div class="avatar">
+      <img src="https://avatars.githubusercontent.com/u/37741900?v=4" alt="">
+    </div>
+
+    <div class="personal-info">
+      <h1 class="name">TIEN DAT HUYNH</h1>
+      <h4 class="position">FRONT-END DEVELOPER</h4>
+    </div>
+  </div>
+
+  <div class="right contact">
+    <a>July 1997</a>
+    <a href="tel:+84344747434">0344 747 434</a>
+    <a href="https://github.com/tiendat77">github.com/tiendat77</a>
+    <a href="mailto:huynhztienzdat@gmail.com">huynhztienzdat@gmail.com</a>
+  </div>
+</section>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left, .right {
+    margin-bottom: 1em;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .name {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    display: inline-block;
+  }
+
+  .position {
+    margin: 0;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .contact a {
+    display: block;
+    text-align: right;
+    margin-bottom: 0.25rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header {
+      display: block;
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+    }
+
+    .contact a {
+      text-align: left;
+    }
+  }
+</style>

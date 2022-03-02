@@ -35,4 +35,8 @@ body {
     color: #adbac7;
     background: #1d2128;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #adbac7 !important;
+  }
 }

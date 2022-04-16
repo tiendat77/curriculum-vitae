@@ -1,7 +1,8 @@
 ---
 import Header from '../components/Header.astro';
-import Resume from '../components/Resume.astro';
-let title = 'Tien Dat Huynh Resume';
+import ResumePage1 from '../components/ResumePage1.astro';
+import ResumePage2 from '../components/ResumePage2.astro';
+let title = 'Tien Dat Huynh';
 ---
 
 <html lang="en">
@@ -21,7 +22,11 @@ let title = 'Tien Dat Huynh Resume';
   <main>
     <page size="A4">
       <Header />
-      <Resume />
+      <ResumePage1 />
+    </page>
+
+    <page size="A4">
+      <ResumePage2 />
     </page>
   </main>
 </body>

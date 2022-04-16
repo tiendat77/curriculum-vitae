@@ -23,11 +23,7 @@ body {
   background: #f9fafb;
 }
 
-@media print {
-  html, body {
-    width: 210mm;
-    height: 297mm;
-  }
+@media only screen and (max-width: 600px) {
 }
 
 @media (prefers-color-scheme: dark) {

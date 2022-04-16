@@ -48,13 +48,23 @@ page[size="A4"][layout="landscape"] {
 
   page {
     margin: 0;
-    padding: 16px 12px;
-    box-shadow: none;
+    padding: 0 16px;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
   }
 
   page[size="A4"] {
     width: 100%;
-    height: 100%;
+    height: auto;
+  }
+
+  page:first-child {
+    padding-top: 16px;
+  }
+
+  page:last-child {
+    padding-bottom: 16px;
   }
 }
 

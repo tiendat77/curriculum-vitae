@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  html[data-theme="light"] {
+    --text-color-base: 0, 0, 0;
+    --text-color-accent: 19, 176, 199;
+    --background-color-base: 251, 254, 251;
+    --background-color-card: 230, 230, 230;
+  }
+
+  html[data-theme="dark"] {
+    --text-color-base: 255, 255, 255;
+    --text-color-accent: 0, 161, 125;
+    --background-color-base: 33, 39, 55;
+    --background-color-card: 52, 63, 96;
+  }
+
+  html {
+    font-size: 16px;
+    color: rgb(var(--text-color-base));
+    background-color: rgb(var(--background-color-base));
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+}

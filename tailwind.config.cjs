@@ -30,7 +30,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Fira Sans Condensed', 'sans-serif']
+        sans: ['Barlow Semi Condensed', 'sans-serif'],
       },
       typography: {
         DEFAULT: {

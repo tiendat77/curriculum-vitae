@@ -1,10 +1,37 @@
-import Summary from './Summary.astro';
-
-<Summary />
-
 ## Profile
 
 As a front-end web developer with a passion for coding, I love nothing more than bringing my ideas to life through intuitive and engaging interfaces. Whether it's creating sleek and modern designs or implementing complex functionalities, I thrive on the challenge of pushing my skills to the limit and delivering high-quality results. With a keen eye for detail and a thirst for knowledge, I am always seeking out new technologies and techniques to improve my craft and create even better user experiences. Let's build something awesome together!
+
+
+```typescript
+class TienDat {
+  pronouns = 'He' || 'Him';
+  name = 'Tien Dat Huynh';
+  role = 'Front-end Developer';
+  code = [
+    'Javascript', 'Typescript',
+    'HTML', 'CSS', 'SCSS'
+    'Angular', 'TailwindCSS',
+    'Ionic', 'NodeJS', 'Android'
+    'Java', 'Astro'
+  ];
+  misc = [
+    'Inkscape', 'Krita', 'Docker',
+    'Wordpress', 'Arduino', 'Linux'
+  ];
+
+  sayJoke() {
+    console.log(\`
+      "There are two ways to write error-free programs;
+          only the third works."
+        - Alan J. Perlis
+    \`);
+  }
+}
+
+let me = new TienDat();
+me.sayJoke();
+```
 
 ## Education
 

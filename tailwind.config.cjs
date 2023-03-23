@@ -30,14 +30,13 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Barlow Semi Condensed', 'sans-serif'],
+        sans: ['Nunito', 'sans-serif'],
       },
       typography: {
         DEFAULT: {
           css: {
             maxWidth: '100ch',
             a: {
-              color: 'rgb(var(--text-color-accent))',
               textDecoration: 'none',
               '&:hover': {
                 textDecoration: 'underline'

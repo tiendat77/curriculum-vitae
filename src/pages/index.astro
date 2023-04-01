@@ -1,7 +1,5 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Main from "@components/Main.astro";
 import Summary from '@contents/Summary.astro';
 import Contact from '@contents/Contact.astro';
 import Education from '@contents/Education.astro';
@@ -13,23 +11,12 @@ import References from '@contents/References.astro';
 ---
 
 <Layout>
-  <Header />
-  <Main>
-    <Summary />
-
-    <div class="grid grid-cols-1 sm:grid-cols-12 print:grid-cols-12">
-      <div class="col-span-4 sm:pr-8 print:pr-8">
-        <Contact />
-        <Skills />
-        <Education />
-      </div>
-
-      <div class="col-span-8 sm:pl-8 print:pl-8 sm:border-l print:border-l">
-        <Profile />
-        <Experience />
-        <Projects />
-        <References />
-      </div>
-    </div>
-  </Main>
+  <Summary />
+  <Profile />
+  <Contact />
+  <Experience />
+  <Projects />
+  <Skills />
+  <Education />
+  <References />
 </Layout>

@@ -3,25 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-  :root,
-  html[data-theme="light"] {
-    --text-color-base: 0, 0, 0;
-    --text-color-accent: 19, 176, 199;
-    --background-color-base: 251, 254, 251;
-    --background-color-card: 230, 230, 230;
-  }
-
-  html[data-theme="dark"] {
-    --text-color-base: 255, 255, 255;
-    --text-color-accent: 0, 161, 125;
-    --background-color-base: 33, 39, 55;
-    --background-color-card: 52, 63, 96;
-  }
 
   html {
     font-size: 16px;
     color: rgb(var(--text-color-base));
-    background-color: rgb(var(--background-color-base));
   }
 
   body {
@@ -30,11 +15,40 @@
     min-height: 100vh;
   }
 
+  svg {
+    @apply inline-block w-6 h-6 min-w-6 min-h-6;
+  }
+
+  ::selection {
+    @apply bg-indigo-400 bg-opacity-50 text-white;
+  }
+
+  article.minimalist {
+    @apply prose prose-slate m-0
+      max-w-fit bg-white px-12 py-8 pt-20 rounded-md prose-h1:text-3xl prose-h2:mb-3 prose-h2:mt-8
+      prose-h2:text-cyan-600 prose-h2:dark:text-cyan-500 prose-h3:mb-3
+      prose-h3:mt-8 prose-h3:text-xl prose-h4:mb-3 prose-h4:mt-4
+      prose-h4:text-slate-600 prose-p:my-2
+      prose-p:leading-6 prose-a:text-current prose-a:no-underline prose-a:transition-colors hover:prose-a:text-slate-400 prose-a:font-normal
+      prose-table:mt-4 prose-thead:border-0 prose-th:p-0
+      prose-th:font-medium prose-td:p-0 prose-td:text-slate-500
+      dark:bg-slate-800
+      dark:prose-invert
+      prose-h4:dark:text-slate-400
+      sm:px-24 sm:py-14
+      sm:shadow-md lg:max-w-4xl;
+  }
+
   @page {
     size: A4 portrait;
   }
 
   @media print {
+    page[size="A4"] {
+      width: 210mm;
+      height: 297mm;
+    }
+
     html, body {
       font-size: 12px;
       size: A4 portrait;

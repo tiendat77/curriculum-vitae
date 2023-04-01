@@ -17,31 +17,19 @@ module.exports = {
       container: {
         center: true
       },
-      textColor: {
-        skin: {
-          base: withOpacity("--text-color-base"),
-          accent: withOpacity("--text-color-accent"),
-        }
-      },
-      backgroundColor: {
-        skin: {
-          base: withOpacity("--background-color-base"),
-          card: withOpacity("--background-color-card"),
-        }
-      },
+      minWidth: theme => ({
+        ...theme('spacing')
+      }),
+      minHeight: theme => ({
+        ...theme('spacing')
+      }),
       fontFamily: {
         sans: ['Nunito', 'sans-serif'],
       },
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: '100ch',
-            a: {
-              textDecoration: 'none',
-              '&:hover': {
-                textDecoration: 'underline'
-              }
-            }
+            maxWidth: '100ch'
           }
         }
       }

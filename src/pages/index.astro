@@ -4,15 +4,18 @@ import Hero from "@/contents/Hero.astro";
 import About from "@/contents/About.astro";
 import Contact from "@/contents/Contact.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
+import Experience from "@/contents/Experience.astro";
+import Projects from "@/contents/Projects.astro";
+import Education from "@/contents/Education.astro";
 ---
 
 <Layout>
   <main class="markdown relative grid gap-12 p-8 xl:bg-base-100 xl:rounded-lg xl:shadow-sm max-sm:py-16 xl:grid-cols-6 md:p-16 xl:gap-24 print:!grid-cols-1 print:!gap-6 print:!p-0 print:!rounded-none print:!bg-transparent print:!shadow-none">
-    <div class="absolute top-0 -z-10 h-full w-full print:hidden">
+    <div class="absolute top-0 w-full h-full -z-10 print:hidden">
       <div class="bg-primary/20 xl:bg-primary/50 absolute left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0"></div>
     </div>
 
-    <div class="space-y-6 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0">
+    <div class="space-y-6 md:col-span-2">
       <Hero />
       <About />
       <Contact />
@@ -20,10 +23,13 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
     </div>
 
     <div class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0">
-      <p>
-        Astro is a new kind of static site builder that delivers lightning-fast performance with a modern developer experience.
-      </p>
+      <Experience />
+      <Projects />
+      <Education />
     </div>
 
+    <div class="flex w-full justify-center md:col-span-6 print:!hidden">
+      <p class="text-neutral text-xs !mb-0">Living, learning, & leveling up one day at a time</p>
+    </div>
   </main>
 </Layout>

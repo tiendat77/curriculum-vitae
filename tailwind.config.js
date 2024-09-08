@@ -3,18 +3,18 @@ const plugin = require('tailwindcss/plugin');
 // Generate at: https://uicolors.app
 const theme = {
   'primary': {
-    '50': '#f1f8fd',
-    '100': '#deeffb',
-    '200': '#c5e5f8',
-    '300': '#9dd6f3',
-    '400': '#6fbeeb',
-    '500': '#5aa9e6',
-    '600': '#3888d8',
-    '700': '#2f73c6',
-    '800': '#2c5da1',
-    '900': '#284f80',
-    '950': '#1d314e',
-    'DEFAULT': '#5aa9e6',
+    '50': '#ebf9ff',
+    '100': '#d2f1ff',
+    '200': '#afe8ff',
+    '300': '#78dcff',
+    '400': '#39c5ff',
+    '500': '#0ba2ff',
+    '600': '#007eff',
+    '700': '#0065ff',
+    '800': '#0053d4',
+    '900': '#023e8a',
+    '950': '#072e64',
+    'DEFAULT': '#0053d4',
   },
   'on-primary': {
     '500': '#ffffff',
@@ -115,6 +115,7 @@ module.exports = {
         '480': '120rem'
       },
       fontSize: {
+        'xxs': ['0.625rem', '0.75rem'],
         '3xl': ['1.875rem', '2.5rem'],
         '4xl': ['2.25rem', '2.75rem']
       },
@@ -191,7 +192,7 @@ module.exports = {
         },
         dark: {
           ...require('daisyui/src/theming/themes')['dark'],
-          'primary': theme['primary']['DEFAULT'],
+          'primary': theme['primary']['500'],
           'primary-content': theme['on-primary']['DEFAULT'],
           'secondary': theme['secondary']['DEFAULT'],
           'secondary-content': theme['on-secondary']['DEFAULT'],

@@ -90,4 +90,12 @@
   .table :where(th:last-child, td:last-child) {
     @apply rounded-tr rounded-br;
   }
+
+  .badge {
+    @apply gap-1 rounded-md px-2 py-0.5 text-xs;
+  }
+
+  .badge-primary {
+    @apply text-primary bg-primary-100 border-primary;
+  }
 }

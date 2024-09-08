@@ -4,9 +4,9 @@
  */
 
 export const SITE = {
-  website: "https://tiendathuynh.netlify.app",
+  url: "https://tiendathuynh.netlify.app",
   author: "Tien Dat Huynh <huynhztienzdat@gmail.com>",
-  description: "Tien Dat Huynh's Resume",
-  title: "Tien Dat Huynh's Resume",
+  description: "Tien Dat Huynh Resume - Frontend Developer",
+  title: "Tien Dat Huynh Resume",
 };
 

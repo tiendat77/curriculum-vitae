@@ -1,22 +1,18 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Summary from '@contents/Summary.astro';
-import Contact from '@contents/Contact.astro';
-import Education from '@contents/Education.astro';
-import Profile from '@contents/Profile.astro';
-import Experience from '@contents/Experience.astro';
-import Skills from '@contents/Skills.astro';
-import Projects from '@contents/Projects.astro';
-import References from '@contents/References.astro';
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-  <Summary />
-  <Profile />
-  <Contact />
-  <Experience />
-  <Projects />
-  <Skills />
-  <Education />
-  <References />
+  <main class="grid gap-12 p-8 xl:bg-base-100 xl:rounded-lg xl:shadow-sm max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:!grid-cols-1 print:!gap-6 print:!p-0 print:!rounded-none print:!bg-transparent print:!shadow-none">
+
+    <div class="space-y-6 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0">
+      <h1>Welcome to Astro</h1>
+    </div>
+
+    <div class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0">
+      <p>
+        Astro is a new kind of static site builder that delivers lightning-fast performance with a modern developer experience.
+      </p>
+    </div>
+  </main>
 </Layout>

@@ -16,7 +16,7 @@
   }
 
   svg {
-    @apply inline-block w-6 h-6 min-w-6 min-h-6;
+    display: inline-block;
   }
 
   ::selection {
@@ -47,6 +47,7 @@
     page[size="A4"] {
       width: 210mm;
       height: 297mm;
+      padding: 10mm;
     }
 
     html, body {
@@ -63,4 +64,47 @@
     }
   }
 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* ----------------------------------------------------------------------------------------------------- */
+  /*  @ DaisyUI
+  /* ----------------------------------------------------------------------------------------------------- */
+  .btn {
+    @apply text-base;
+  }
+
+  .btn-circle {
+    @apply hover:bg-transparent;
+  }
+
+  .select {
+    @apply text-base;
+  }
+
+  .menu {
+    @apply text-base;
+  }
+
+  .table {
+    @apply text-base
+  }
+
+  .table :where(thead, tfoot) {
+    @apply text-base;
+  }
+
+  .table :where(th:first-child, td:first-child) {
+    @apply rounded-tl rounded-bl;
+  }
+
+  .table :where(th:last-child, td:last-child) {
+    @apply rounded-tr rounded-br;
+  }
 }

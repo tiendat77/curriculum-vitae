@@ -1,12 +1,22 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Hero from "@/contents/Hero.astro";
+import About from "@/contents/About.astro";
+import Contact from "@/contents/Contact.astro";
+import ThemeToggle from "@/components/ThemeToggle.astro";
 ---
 
 <Layout>
-  <main class="grid gap-12 p-8 xl:bg-base-100 xl:rounded-lg xl:shadow-sm max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:!grid-cols-1 print:!gap-6 print:!p-0 print:!rounded-none print:!bg-transparent print:!shadow-none">
+  <main class="markdown relative grid gap-12 p-8 xl:bg-base-100 xl:rounded-lg xl:shadow-sm max-sm:py-16 xl:grid-cols-6 md:p-16 xl:gap-24 print:!grid-cols-1 print:!gap-6 print:!p-0 print:!rounded-none print:!bg-transparent print:!shadow-none">
+    <div class="absolute top-0 -z-10 h-full w-full print:hidden">
+      <div class="bg-primary/20 xl:bg-primary/50 absolute left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0"></div>
+    </div>
 
     <div class="space-y-6 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0">
-      <h1>Welcome to Astro</h1>
+      <Hero />
+      <About />
+      <Contact />
+      <ThemeToggle />
     </div>
 
     <div class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0">
@@ -14,5 +24,6 @@ import Layout from "@/layouts/Layout.astro";
         Astro is a new kind of static site builder that delivers lightning-fast performance with a modern developer experience.
       </p>
     </div>
+
   </main>
 </Layout>

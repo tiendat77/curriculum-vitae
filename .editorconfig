@@ -9,7 +9,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 [*.html]
-max_line_length = off
+max_line_length = 100
 
 [*.js, *.jsx, *.ts, *.tsx]
 quote_type = single

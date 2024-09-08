@@ -2,8 +2,7 @@
   "name": "resume",
   "description": "My resume",
   "author": "Tien Dat Huynh <huynhztienzdat@gmail.com>",
-  "version": "0.0.1",
-  "type": "module",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -18,6 +17,7 @@
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.15.4",
+    "lodash": "^4.17.21",
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "@commitlint/cz-commitlint": "^17.4.4",
     "@tailwindcss/typography": "^0.5.9",
     "@typescript-eslint/parser": "^5.55.0",
+    "chroma-js": "^3.1.1",
     "commitizen": "^4.3.0",
     "daisyui": "^4.12.10",
     "eslint": "^8.36.0",

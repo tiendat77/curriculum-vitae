@@ -42,15 +42,6 @@ const theme = {
 
 /** @type {import('tailwindcss').Config} */
 
-function withOpacity(variableName) {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`;
-    }
-    return `rgb(var(${variableName}))`;
-  };
-}
-
 module.exports = {
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"
@@ -155,6 +146,10 @@ module.exports = {
               width: 'auto',
             },
 
+            a: {
+              textDecoration: 'none',
+            },
+
             figure: {
               display: 'flex',
               justifyContent: 'center',
@@ -166,49 +161,9 @@ module.exports = {
   },
   plugins: [
     require('daisyui'),
-    require("@tailwindcss/typography"),
-
-    plugin(
-      ({matchUtilities, theme}) => {
-        matchUtilities(
-          {
-            'icon-size': (value) => ({
-              width: value,
-              height: value,
-              minWidth: value,
-              minHeight: value,
-              fontSize: value,
-              lineHeight: value,
-            }),
-          },
-          {
-            values: theme('iconSize'),
-          }
-        );
-      },
-      {
-        theme: {
-          iconSize: {
-            3: '0.75rem',
-            3.5: '0.875rem',
-            4: '1rem',
-            4.5: '1.125rem',
-            5: '1.25rem',
-            6: '1.5rem',
-            7: '1.75rem',
-            8: '2rem',
-            10: '2.5rem',
-            12: '3rem',
-            14: '3.5rem',
-            16: '4rem',
-            18: '4.5rem',
-            20: '5rem',
-            22: '5.5rem',
-            24: '6rem',
-          },
-        },
-      }
-    ),
+    require('@tailwindcss/typography'),
+    require('./tailwind/icon-size'),
+    require('./tailwind/theming')({theme}),
   ],
   daisyui: {
     styled: true,
@@ -227,7 +182,7 @@ module.exports = {
           'secondary-content': theme['on-secondary']['DEFAULT'],
           'accent': '#FFBC42',
           'accent-content': '#FFFFFF',
-          'neutral': '#D1D5DB',
+          'neutral': '#787878',
           'neutral-content': '#FFFFFF',
           'info-content': '#FFFFFF',
           'warning-content': '#FFFFFF',

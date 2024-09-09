@@ -7,6 +7,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 import Experience from "@/contents/Experience.astro";
 import Projects from "@/contents/Projects.astro";
 import Education from "@/contents/Education.astro";
+import PrintButton from "@/components/PrintButton.astro";
 ---
 
 <Layout>
@@ -19,10 +20,14 @@ import Education from "@/contents/Education.astro";
       <Hero />
       <About />
       <Contact />
-      <ThemeToggle />
+
+      <div class="flex gap-2 print:!hidden">
+        <PrintButton />
+        <ThemeToggle />
+      </div>
     </div>
 
-    <div class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0">
+    <div class="space-y-12 md:col-span-4 print:!col-span-1 print:space-y-8">
       <Experience />
       <Projects />
       <Education />

@@ -1,0 +1,119 @@
+---
+import Timeline from "@/components/Timeline.astro";
+
+import AngularIcon from "@/icons/angular.astro";
+import NodeJsIcon from "@/icons/node.astro";
+import MongoIcon from "@/icons/mongo.astro";
+import UbuntuIcon from "@/icons/ubuntu.astro";
+import GitlabIcon from "@/icons/gitlab.astro";
+import TypescriptIcon from "@/icons/typescript.astro";
+import HtmlIcon from "@/icons/html.astro";
+import CssIcon from "@/icons/css.astro";
+import ClickUpIcon from "@/icons/clickup.astro";
+---
+
+<Timeline from="2019-09-03" to="2022-03-30">
+  <h3>
+    <span>Front-end Developer</span>
+
+    <span>@</span>
+
+    <a
+      target="_blank"
+      href="https://leanwell.co/"
+      class="group/link text-primary"
+    >
+      Leanwell Technology
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+        class="ml-1 transition-transform translate-y-px icon-size-4 shrink-0 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+      >
+        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  </h3>
+
+  <div class="mt-2 text-xs text-neutral">
+    Manufacturing operations management - District 7, Ho Chi Minh City
+  </div>
+
+  <div class="flex flex-col gap-4 mt-6 text-sm">
+    <div class="flex flex-col gap-2">
+      <ul class="flex flex-col gap-2 pl-4 list-disc">
+        <li>
+          Worked with a team of 6 to develop and maintain the Leanwell MOM/MES system.
+        </li>
+        <li>
+          Learned the Angular 6 framework. Migrating applications from Angular 6 to 9.
+        </li>
+        <li>
+          Integrate the web app with IoT devices.
+        </li>
+        <li>
+          Collaborate closely with clients to gather their requirements
+          and design custom features that meet their needs.
+        </li>
+        <li>
+          Writing technical documentation for developers, and user guides
+          for clients, providing user-friendly instructions to ensure
+          ease of use for end-users.
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <h4>Tech stack:</h4>
+
+      <ul class="flex flex-wrap gap-2">
+        <li class="badge badge-primary print:!bg-transparent">
+          <AngularIcon />
+          <span>Angular</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <HtmlIcon />
+          <span>Html</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <CssIcon />
+          <span>Css</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <TypescriptIcon />
+          <span>Typescript</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <NodeJsIcon />
+          <span>NodeJs</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <MongoIcon />
+          <span>MongoDb</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <UbuntuIcon />
+          <span>Ubuntu</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <GitlabIcon />
+          <span>GitLab</span>
+        </li>
+
+        <li class="badge badge-primary print:!bg-transparent">
+          <ClickUpIcon />
+          <span>ClickUp</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Timeline>

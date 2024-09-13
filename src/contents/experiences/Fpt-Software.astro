@@ -1,0 +1,42 @@
+---
+import Timeline from "@/components/Timeline.astro";
+
+import CIcon from "@/icons/c.astro";
+---
+
+<Timeline from="2019-07-01" to="2019-09-06">
+  <h3>
+    <span>Intern Embedded / IoT</span>
+
+    <span>@</span>
+
+    <a class="group/link text-primary">
+      FPT Software
+    </a>
+  </h3>
+
+  <div class="mt-2 text-xs text-neutral">
+    District 9, Ho Chi Minh City
+  </div>
+
+  <div class="flex flex-col gap-4 mt-6 text-sm">
+    <div class="flex flex-col gap-2">
+      <ul class="flex flex-col gap-2 pl-4 list-disc">
+        <li>
+          Trained in embedded programming / IoT.
+        </li>
+        <li>
+          Research and develop embedded software for microcontrollers, microprocessors.
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <ul class="flex flex-wrap gap-2">
+        <li class="badge badge-primary print:!bg-transparent">
+          <CIcon />
+        </li>
+      </ul>
+    </div>
+  </div>
+</Timeline>

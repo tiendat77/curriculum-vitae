@@ -1,9 +1,19 @@
 ---
 import Section from '@/components/Section.astro';
+
+import PersonnalGomoku from './projects/per-gomoku.astro';
+import PersonnalLoveAlarm from './projects/per-love-alarm.astro';
+import PersonnalLasotuvi from './projects/per-lasotuvi.astro';
 ---
 
 <Section title="Projects">
-  <p>
-    Under construction...
-  </p>
+  <ul class="flex flex-col gap-2 md:gap-4">
+    <li class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
+      <PersonnalGomoku />
+    </li>
+
+    <li class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
+      <PersonnalLoveAlarm />
+    </li>
+  </ul>
 </Section>

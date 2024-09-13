@@ -1,0 +1,48 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import TailwindIcon from "@/icons/tailwind.astro";
+import DaisyUIIcon from "@/icons/daisyui.astro";
+---
+
+<Project
+  name="Gomoku game"
+  link="gomokudo.vercel.app"
+  href="https://gomokudo.vercel.app/"
+  type="Personal"
+  year="2023"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      Gomoku, also known as “Five in a Row” is a classic strategy game that is
+      known in many countries around the world.
+    </p>
+
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/tiendat77/gomoku"
+      >
+        https://github.com/tiendat77/gomoku
+      </a>
+    </p>
+  </article>
+
+  <ul class="flex flex-wrap gap-2 mt-2">
+    <li class="badge badge-primary print:!bg-transparent">
+      <AngularIcon />
+      <span>Angular 15</span>
+    </li>
+
+    <li class="badge badge-primary print:!bg-transparent">
+      <TailwindIcon />
+      <span>TailwindCSS</span>
+    </li>
+
+    <li class="badge badge-primary print:!bg-transparent">
+      <DaisyUIIcon />
+      <span>DaisyUI</span>
+    </li>
+  </ul>
+</Project>

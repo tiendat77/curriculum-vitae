@@ -1,0 +1,126 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import TailwindIcon from "@/icons/tailwind.astro";
+import DaisyuiIcon from '@/icons/daisyui.astro';
+import NextIcon from '@/icons/next.astro';
+import PrismaIcon from '@/icons/prisma.astro';
+import DotnetIcon from '@/icons/dotnet.astro';
+import SqlIcon from '@/icons/sql.astro';
+---
+
+<Project
+  name="Mua Balo"
+  link="muabalo.com"
+  href="https://muabalo.com/"
+  type="Freelance"
+  year="2024"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      An e-commerce website that sells backpacks, bags, and accessories.
+    </p>
+
+    <p>
+      Sub-projects:
+    </p>
+
+    <ul class="flex flex-col gap-4 list-disc pl-4">
+      <li>
+        <h6 class="mb-1">
+          <a
+            target="_blank"
+            href="https://admin.muabalo.com/"
+            class="text-primary"
+          >
+            MUA Admin
+          </a>
+        </h6>
+
+        <p>
+          A dashboard for managing products, assets, orders, and customers.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-2">
+          <li class="badge badge-primary print:!bg-transparent">
+            <AngularIcon />
+            <span>Angular 18</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <TailwindIcon />
+            <span>TailwindCSS</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <DaisyuiIcon />
+            <span>DaisyUI</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a
+            target="_blank"
+            href="https://muabalo.com/"
+            class="text-primary"
+          >
+            MUA Client (Under Development)
+          </a>
+        </h6>
+
+        <p>
+          A website for customers to view and purchase products.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-2">
+          <li class="badge badge-primary print:!bg-transparent">
+            <NextIcon />
+            <span>Next 14</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <TailwindIcon />
+            <span>TailwindCSS</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <DaisyuiIcon />
+            <span>DaisyUI</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <PrismaIcon />
+            <span>Prisma</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            MUA API <small class="text-neutral">(not my work)</small>
+          </a>
+        </h6>
+
+        <p>
+          A RESTful API that provides data for the website and the dashboard.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <DotnetIcon />
+            <span>Net Core</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <SqlIcon />
+            <span>SQL Server</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+</Project>

@@ -9,6 +9,13 @@
 
 <script>
   document?.querySelector('[data-print-button]')?.addEventListener('click', () => {
+    // Turn off dark mode
+    document.documentElement.setAttribute("data-theme", "light");
+
+    // Set the theme button to light
+    document.querySelector("#theme-btn").checked = false;
+
+    // Print the page
     window.print();
   });
 </script>

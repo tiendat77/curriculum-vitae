@@ -46,7 +46,6 @@ window.onload = () => {
   themeToggle.checked = themeValue === "dark";
 
   document.querySelector("#theme-btn")?.addEventListener("change", (event) => {
-    console.log("clicked, but this is not a form element", event.target.checked);
     themeValue = event.target.checked ? "dark" : "light";
     setPreference();
   });

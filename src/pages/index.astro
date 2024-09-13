@@ -16,24 +16,26 @@ import PrintButton from "@/components/PrintButton.astro";
       <div class="bg-primary/20 xl:bg-primary/50 absolute left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0"></div>
     </div>
 
-    <div class="space-y-6 md:col-span-2">
+    <div class="space-y-6 xl:col-span-2">
       <Hero />
       <About />
       <Contact />
 
-      <div class="flex gap-2 print:!hidden">
-        <PrintButton />
-        <ThemeToggle />
+      <div class="print:!hidden">
+        <div class="flex gap-2 absolute top-0 right-0 m-4 z-10 xl:-ml-2 xl:m-0 xl:relative">
+          <PrintButton />
+          <ThemeToggle />
+        </div>
       </div>
     </div>
 
-    <div class="space-y-12 md:col-span-4 print:!col-span-1 print:space-y-8">
+    <div class="space-y-12 xl:col-span-4 print:!col-span-1 print:space-y-8">
+      <Education />
       <Experience />
       <Projects />
-      <Education />
     </div>
 
-    <div class="flex w-full justify-center md:col-span-6 print:!hidden">
+    <div class="flex w-full justify-center xl:col-span-6 print:!hidden">
       <p class="text-neutral text-xs !mb-0">Living, learning, & leveling up one day at a time</p>
     </div>
   </main>

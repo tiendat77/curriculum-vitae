@@ -4,9 +4,9 @@ import Section from "@/components/Section.astro";
 
 <Section>
   <div class="flex flex-col gap-8">
-    <figure class="not-prose flex justify-center flex-0 my-0">
+    <figure class="flex justify-center my-0 not-prose flex-0">
       <div class="relative w-28 h-28 sm:w-36 sm:h-36">
-        <div class="absolute z-0 w-full h-full rounded-full -top-8 -left-14 bg-opacity-30 bg-primary-200 dark:bg-slate-700"></div>
+        <div class="absolute z-0 w-full h-full rounded-full -top-8 -left-14 bg-opacity-30 bg-primary-200 dark:bg-slate-700 print:!-top-4 print:!-left-12"></div>
 
         <img
           class="relative z-10 object-fill w-full h-full rounded-full"
@@ -27,7 +27,7 @@ import Section from "@/components/Section.astro";
 
       <p class="flex items-center text-neutral">
         <svg
-          class="icon-size-5 mr-1"
+          class="mr-1 icon-size-5"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

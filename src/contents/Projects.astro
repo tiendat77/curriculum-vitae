@@ -1,13 +1,18 @@
 ---
 import Section from '@/components/Section.astro';
 
+import PersonnalTaproStock from './projects/Per-TaproStock.astro';
 import PersonnalGomoku from './projects/Per-Gomoku.astro';
-import PersonnalLoveAlarm from './projects/Per-Love-Alarm.astro';
-import PersonnalLasotuvi from './projects/per-lasotuvi.astro';
+import PersonnalLoveAlarm from './projects/Per-LoveAlarm.astro';
+import PersonnalLasotuvi from './projects/Per-Lasotuvi.astro';
 ---
 
 <Section title="Projects">
-  <ul class="flex flex-col gap-2 md:gap-4">
+  <ul class="flex flex-col gap-8 md:gap-4">
+    <li class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
+      <PersonnalTaproStock />
+    </li>
+
     <li class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
       <PersonnalGomoku />
     </li>

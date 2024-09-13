@@ -1,0 +1,168 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import AstroIcon from "@/icons/astro.astro";
+import TailwindIcon from "@/icons/tailwind.astro";
+import MaterialIcon from '@/icons/material.astro';
+import SignalrIcon from '@/icons/signalr.astro';
+import DotnetIcon from '@/icons/dotnet.astro';
+import SqlIcon from '@/icons/sql.astro';
+import NodeJSIcon from '@/icons/node.astro';
+import PostgreIcon from '@/icons/postgre.astro';
+import ReactIcon from '@/icons/react.astro';
+import DaisyuiIcon from '@/icons/daisyui.astro';
+---
+
+<Project
+  name="Tapro Stock"
+  link="taprostock.vn"
+  href="https://taprostock.vn/"
+  type="Freelance"
+  year="2023-2024"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      A forum where members can discuss and share their experiences about the stock market, investment, and trading.
+      It is also place for Tapro Team sell their courses, and provide support for their members.
+    </p>
+    <p>
+      A tool that help users to analyze the stock market, and make better investment decisions.
+    </p>
+
+    <p>
+      Sub-projects:
+    </p>
+
+    <ul class="flex flex-col gap-4 list-disc pl-4">
+      <li>
+        <h6 class="mb-1">
+          <a
+            target="_blank"
+            href="https://taprostock.vn/"
+            class="text-primary"
+          >
+            Tapro Landing Page
+          </a>
+        </h6>
+
+        <p>
+          A server-side rendered landing page. Introduced the forum, the courses, and the tools.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <AstroIcon />
+            <span>Astro</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <ReactIcon />
+            <span>React</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <TailwindIcon />
+            <span>TailwindCSS</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <DaisyuiIcon />
+            <span>DaisyUI</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a
+            target="_blank"
+            href="https://app.taprostock.vn/home"
+            class="text-primary"
+          >
+            Tapro Forum & Tools
+          </a>
+        </h6>
+
+        <p>
+          An investing discussion forums, e-learning, and tools for analyzing the stock market.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <AngularIcon />
+            <span>Angular</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <MaterialIcon />
+            <span>Material</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <TailwindIcon />
+            <span>TailwindCSS</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <SignalrIcon />
+            <span>SignalR</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            Tapro Crawling Tool
+          </a>
+        </h6>
+
+        <p>
+          A automation tool that help Tapro Team to crawl data from the stock market, and analyze them.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <NodeJSIcon />
+            <span>NodeJs</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <PostgreIcon />
+            <span>PostgreSQL</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            Tapro API <small class="text-neutral">(not my work)</small>
+          </a>
+        </h6>
+
+        <p>
+          A RESTful API that provide data for the forum, the e-learning, and the tools.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <DotnetIcon />
+            <span>Net Core</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <SignalrIcon />
+            <span>SignalR</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <SqlIcon />
+            <span>SQL Server</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+</Project>

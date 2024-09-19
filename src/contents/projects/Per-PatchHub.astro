@@ -3,6 +3,11 @@ import Project from '@/components/Project.astro';
 
 import AngularIcon from "@/icons/angular.astro";
 import TailwindIcon from "@/icons/tailwind.astro";
+import DaisyuiIcon from '@/icons/daisyui.astro';
+import NodeJsIcon from '@/icons/node.astro';
+import MongoDbIcon from '@/icons/mongo.astro';
+import DotnetIcon from '@/icons/dotnet.astro';
+// import ExpressIcon from '@/icons/express.astro';
 ---
 
 <Project
@@ -17,17 +22,83 @@ import TailwindIcon from "@/icons/tailwind.astro";
       PatchHub is a platform for BLogicsystems's developers to share
       their patches to the testers faster and easier.
     </p>
+
+    <p>
+      Sub-projects:
+    </p>
+
+    <ul class="flex flex-col gap-4 list-disc pl-4">
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            PatchHub App
+          </a>
+        </h6>
+
+        <p>
+          A web app that allows developers to upload their patches, and testers to download or install them.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <AngularIcon />
+            <span>Angular 18</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <TailwindIcon />
+            <span>TailwindCSS</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <DaisyuiIcon />
+            <span>DaisyUI</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            PatchHub API
+          </a>
+        </h6>
+
+        <p>
+          A RESTful API that serves the PatchHub App.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <NodeJsIcon />
+            <span>NodeJs</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <MongoDbIcon />
+            <span>MongoDB</span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            PatchHub Service
+          </a>
+        </h6>
+
+        <p>
+          A Windows service that listens for commands from the PatchHub API to install patches.
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="badge badge-primary print:!bg-transparent">
+            <DotnetIcon />
+            <span>Dotnet 7</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </article>
-
-  <ul class="flex flex-wrap gap-2 mt-2">
-    <li class="badge badge-primary print:!bg-transparent">
-      <AngularIcon />
-      <span>Angular 18</span>
-    </li>
-
-    <li class="badge badge-primary print:!bg-transparent">
-      <TailwindIcon />
-      <span>TailwindCSS</span>
-    </li>
-  </ul>
 </Project>

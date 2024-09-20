@@ -7,7 +7,8 @@ import DaisyuiIcon from '@/icons/daisyui.astro';
 import NodeJsIcon from '@/icons/node.astro';
 import MongoDbIcon from '@/icons/mongo.astro';
 import DotnetIcon from '@/icons/dotnet.astro';
-// import ExpressIcon from '@/icons/express.astro';
+import ExpressIcon from '@/icons/express.astro';
+import NatsIcon from '@/icons/nats.astro';
 ---
 
 <Project
@@ -36,7 +37,8 @@ import DotnetIcon from '@/icons/dotnet.astro';
         </h6>
 
         <p>
-          A web app that allows developers to upload their patches, and testers to download or install them.
+          A web app that allows developers to upload their patches,
+          and testers to download or install them with a single click.
         </p>
 
         <ul class="flex flex-wrap gap-2 mt-4">
@@ -75,8 +77,18 @@ import DotnetIcon from '@/icons/dotnet.astro';
           </li>
 
           <li class="badge badge-primary print:!bg-transparent">
+            <ExpressIcon />
+            <span>ExpressJs</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
             <MongoDbIcon />
             <span>MongoDB</span>
+          </li>
+
+          <li class="badge badge-primary print:!bg-transparent">
+            <NatsIcon />
+            <span>Nats</span>
           </li>
         </ul>
       </li>

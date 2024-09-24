@@ -8,6 +8,7 @@ import Experience from "@/contents/Experience.astro";
 import Projects from "@/contents/Projects.astro";
 import Education from "@/contents/Education.astro";
 import PrintButton from "@/components/PrintButton.astro";
+import Skills from "@/contents/Skills.astro";
 ---
 
 <Layout>
@@ -36,6 +37,10 @@ import PrintButton from "@/components/PrintButton.astro";
 
     <div class="flex w-full justify-center xl:col-span-6">
       <Projects />
+    </div>
+
+    <div class="flex w-full xl:col-span-6">
+      <Skills />
     </div>
 
     <div class="flex w-full justify-center xl:col-span-6 print:!hidden">

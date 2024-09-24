@@ -1,11 +1,52 @@
 ---
 import Section from "@/components/Section.astro";
 
-
+import AngularIcon from "@/icons/angular-color.astro";
+import TailwindIcon from "@/icons/tailwind-color.astro";
+import NodeJsIcon from "@/icons/node-color.astro";
+import UbuntuIcon from "@/icons/ubuntu-color.astro";
+import DockerIcon from "@/icons/docker-color.astro";
+import JenkinsIcon from "@/icons/jenkins-color.astro";
+import FigmaIcon from "@/icons/figma-color.astro";
 ---
 
 <Section title="Skills">
-  <p>
-    Under construction...
-  </p>
+  <div class="grid xl:grid-cols-2 gap-8 md:gap-4">
+    <ul class="flex flex-wrap gap-2 mt-2">
+      <li class="badge badge-lg print:!bg-transparent">
+        <AngularIcon />
+        <span class="font-semibold">Angular</span>
+      </li>
+
+      <li class="badge badge-lg print:!bg-transparent">
+        <TailwindIcon />
+        <span class="font-semibold">Tailwind</span>
+      </li>
+
+      <li class="badge badge-lg print:!bg-transparent">
+        <NodeJsIcon />
+        <span class="font-semibold">NodeJs</span>
+      </li>
+
+      <li class="badge badge-lg print:!bg-transparent">
+        <UbuntuIcon />
+        <span class="font-semibold">Ubuntu</span>
+      </li>
+
+      <li class="badge badge-lg print:!bg-transparent">
+        <DockerIcon />
+        <span class="font-semibold">Docker</span>
+      </li>
+
+      <li class="badge badge-lg print:!bg-transparent">
+        <JenkinsIcon />
+        <span class="font-semibold">Jenkins</span>
+      </li>
+
+      <li class="badge badge-lg print:!bg-transparent">
+        <FigmaIcon />
+        <span class="font-semibold">Figma</span>
+      </li>
+    </ul>
+  </div>
 </Section>

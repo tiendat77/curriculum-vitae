@@ -2,51 +2,121 @@
 import Section from "@/components/Section.astro";
 
 import AngularIcon from "@/icons/angular-color.astro";
+import AstroIcon from "@/icons/astro-color.astro";
 import TailwindIcon from "@/icons/tailwind-color.astro";
+import TypescriptIcon from "@/icons/typescript-color.astro";
 import NodeJsIcon from "@/icons/node-color.astro";
 import UbuntuIcon from "@/icons/ubuntu-color.astro";
 import DockerIcon from "@/icons/docker-color.astro";
 import JenkinsIcon from "@/icons/jenkins-color.astro";
 import FigmaIcon from "@/icons/figma-color.astro";
+import InscapeIcon from "@/icons/inkscape-color.astro";
+import ArduinoIcon from "@/icons/arduino-color.astro";
+import NginxIcon from "@/icons/nginx-color.astro";
+import GitIcon from "@/icons/git-color.astro";
+import VsCodeIcon from "@/icons/vs-code-color.astro";
+import ReactIcon from "@/icons/react-color.astro";
+import NextjsIcon from "@/icons/nextjs-color.astro";
 ---
 
 <Section title="Skills">
   <div class="grid xl:grid-cols-2 gap-8 md:gap-4">
-    <ul class="flex flex-wrap gap-2 mt-2">
-      <li class="badge badge-lg print:!bg-transparent">
-        <AngularIcon />
-        <span class="font-semibold">Angular</span>
-      </li>
+    <div>
+      <h4 class="mb-4">Languages and frameworks</h4>
 
-      <li class="badge badge-lg print:!bg-transparent">
-        <TailwindIcon />
-        <span class="font-semibold">Tailwind</span>
-      </li>
+      <ul class="flex flex-wrap gap-2 mt-2">
+        <li class="badge badge-lg print:!bg-transparent">
+          <AngularIcon />
+          <span class="font-semibold">Angular</span>
+        </li>
 
-      <li class="badge badge-lg print:!bg-transparent">
-        <NodeJsIcon />
-        <span class="font-semibold">NodeJs</span>
-      </li>
+        <li class="badge badge-lg print:!bg-transparent">
+          <AstroIcon />
+          <span class="font-semibold">Astro</span>
+        </li>
 
-      <li class="badge badge-lg print:!bg-transparent">
-        <UbuntuIcon />
-        <span class="font-semibold">Ubuntu</span>
-      </li>
+        <li class="badge badge-lg print:!bg-transparent">
+          <TailwindIcon />
+          <span class="font-semibold">Tailwind</span>
+        </li>
 
-      <li class="badge badge-lg print:!bg-transparent">
-        <DockerIcon />
-        <span class="font-semibold">Docker</span>
-      </li>
+        <li class="badge badge-lg print:!bg-transparent">
+          <TypescriptIcon />
+          <span class="font-semibold">Typescript</span>
+        </li>
 
-      <li class="badge badge-lg print:!bg-transparent">
-        <JenkinsIcon />
-        <span class="font-semibold">Jenkins</span>
-      </li>
+        <li class="badge badge-lg print:!bg-transparent">
+          <NodeJsIcon />
+          <span class="font-semibold">NodeJs</span>
+        </li>
+      </ul>
+    </div>
 
-      <li class="badge badge-lg print:!bg-transparent">
-        <FigmaIcon />
-        <span class="font-semibold">Figma</span>
-      </li>
-    </ul>
+    <div>
+      <h4 class="mb-4">Tools</h4>
+
+      <ul class="flex flex-wrap gap-2 mt-2">
+        <li class="badge badge-lg print:!bg-transparent">
+          <VsCodeIcon />
+          <span class="font-semibold">Vs Code</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <GitIcon />
+          <span class="font-semibold">Git</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <UbuntuIcon />
+          <span class="font-semibold">Ubuntu</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <DockerIcon />
+          <span class="font-semibold">Docker</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <NginxIcon />
+          <span class="font-semibold">Nginx</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <JenkinsIcon />
+          <span class="font-semibold">Jenkins</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <FigmaIcon />
+          <span class="font-semibold">Figma</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <InscapeIcon />
+          <span class="font-semibold">Inkscape</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <ArduinoIcon />
+          <span class="font-semibold">Arduino</span>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="mb-4">Beginner</h4>
+
+      <ul class="flex flex-wrap gap-2 mt-2">
+        <li class="badge badge-lg print:!bg-transparent">
+          <ReactIcon />
+          <span class="font-semibold">React</span>
+        </li>
+
+        <li class="badge badge-lg print:!bg-transparent">
+          <NextjsIcon />
+          <span class="font-semibold">Next.js</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </Section>

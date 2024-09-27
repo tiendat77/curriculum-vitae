@@ -1,8 +1,11 @@
 ---
 import Project from '@/components/Project.astro';
 
+import NxIcon from "@/icons/nx.astro";
 import AngularIcon from "@/icons/angular.astro";
 import TailwindIcon from "@/icons/tailwind.astro";
+import SignalrIcon from '@/icons/signalr.astro';
+import MaterialIcon from '@/icons/material.astro';
 ---
 
 <Project
@@ -21,6 +24,11 @@ import TailwindIcon from "@/icons/tailwind.astro";
 
     <ul class="flex flex-wrap gap-2 mt-2">
       <li class="badge badge-primary print:!bg-transparent">
+        <NxIcon />
+        <span>Nx</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
         <AngularIcon />
         <span>Angular 15</span>
       </li>
@@ -28,6 +36,16 @@ import TailwindIcon from "@/icons/tailwind.astro";
       <li class="badge badge-primary print:!bg-transparent">
         <TailwindIcon />
         <span>TailwindCSS</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <MaterialIcon />
+        <span>Material</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <SignalrIcon />
+        <span>SignalR</span>
       </li>
     </ul>
   </article>

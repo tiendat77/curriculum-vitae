@@ -5,7 +5,8 @@ import About from "@/contents/About.astro";
 import Contact from "@/contents/Contact.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
 import Experience from "@/contents/Experience.astro";
-import Projects from "@/contents/Projects.astro";
+import PersonalProjects from "@/contents/PersonalProjects.astro";
+import WorkProjects from "@/contents/WorkProjects.astro";
 import Education from "@/contents/Education.astro";
 import PrintButton from "@/components/PrintButton.astro";
 import Skills from "@/contents/Skills.astro";
@@ -36,7 +37,11 @@ import Skills from "@/contents/Skills.astro";
     </div>
 
     <div class="flex w-full justify-center xl:col-span-6">
-      <Projects />
+      <PersonalProjects />
+    </div>
+
+    <div class="flex w-full justify-center xl:col-span-6">
+      <WorkProjects />
     </div>
 
     <div class="flex w-full xl:col-span-6">

@@ -1,0 +1,117 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import TailwindIcon from "@/icons/tailwind.astro";
+import SignalrIcon from '@/icons/signalr.astro';
+import MaterialIcon from '@/icons/material.astro';
+import CapacitorIcon from '@/icons/capacitor.astro';
+---
+
+<Project
+  name="Sensa Booking"
+  link="sensabooking.com"
+  href="https://sensabooking.com/"
+  type="Work"
+  year="2022 - Present"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      A booking platform for nail and beauty salons.
+      It allows customers to book appointments online, and salons to manage their business.
+    </p>
+
+    <p>
+      Sub-projects:
+    </p>
+
+    <ul class="flex flex-col gap-4 list-disc pl-4">
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            Sensa Booking Dashboard
+          </a>
+        </h6>
+
+        <p>
+          A dashboard for salon owner to manage their business, appointments, customers, and employees.
+        </p>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            Sensa Booking Page
+          </a>
+        </h6>
+
+        <p>
+          A booking page for customers to book appointments online with salons.
+        </p>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            Sensa Booking Check In
+          </a>
+        </h6>
+
+        <p>
+          A check-in app for customers to check in when they arrive at the salon.
+        </p>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            Sensa Booking Wiki
+          </a>
+        </h6>
+
+        <p>
+          A wiki page for customers and salon owners to learn more about the platform.
+        </p>
+      </li>
+
+      <li>
+        <h6 class="mb-1">
+          <a class="text-primary">
+            Sensa Booking Admin
+          </a>
+        </h6>
+
+        <p>
+          An admin panel for the company to manage the platform, users and payments.
+        </p>
+      </li>
+    </ul>
+
+    <ul class="flex flex-wrap gap-2 mt-2">
+      <li class="badge badge-primary print:!bg-transparent">
+        <AngularIcon />
+        <span>Angular 12</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <TailwindIcon />
+        <span>TailwindCSS</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <MaterialIcon />
+        <span>Material</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <SignalrIcon />
+        <span>SignalR</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <CapacitorIcon />
+        <span>CapacitorJS</span>
+      </li>
+    </ul>
+  </article>
+</Project>

@@ -1,0 +1,38 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import TailwindIcon from "@/icons/tailwind.astro";
+import MaterialIcon from '@/icons/material.astro';
+---
+
+<Project
+  name="Licenses Management System"
+  link=""
+  href=""
+  type="Work"
+  year="2022 - Present"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      License management system for BLogic-ers. It helps to manage product licenses, and track the usage of each license.
+    </p>
+
+    <ul class="flex flex-wrap gap-2 mt-2">
+      <li class="badge badge-primary print:!bg-transparent">
+        <AngularIcon />
+        <span>Angular 15</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <TailwindIcon />
+        <span>TailwindCSS</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <MaterialIcon />
+        <span>Material</span>
+      </li>
+    </ul>
+  </article>
+</Project>

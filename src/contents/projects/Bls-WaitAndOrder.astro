@@ -1,0 +1,44 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import TailwindIcon from "@/icons/tailwind.astro";
+import DaisyuiIcon from '@/icons/daisyui.astro';
+import CapacitorIcon from '@/icons/capacitor.astro';
+---
+
+<Project
+  name="Wait & Order"
+  link=""
+  href=""
+  type="Work"
+  year="2024"
+>
+  <article class="mt-2 text-sm">
+    <p>
+
+    </p>
+
+    <ul class="flex flex-wrap gap-2 mt-2">
+      <li class="badge badge-primary print:!bg-transparent">
+        <AngularIcon />
+        <span>Angular 18</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <TailwindIcon />
+        <span>TailwindCSS</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <DaisyuiIcon />
+        <span>DaisyUI</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <CapacitorIcon />
+        <span>CapacitorJS</span>
+      </li>
+    </ul>
+  </article>
+</Project>

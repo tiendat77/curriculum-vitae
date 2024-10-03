@@ -1,0 +1,39 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import MaterialIcon from '@/icons/material.astro';
+---
+
+<Project
+  name="Leanwell MOM/MES"
+  link=""
+  href=""
+  type="Work"
+  year="2019 - 2022"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      Manufacturing operations management software offers a comprehensive
+      range of features, including production tracking and scheduling,
+      human resource, and catering and food service management.
+    </p>
+
+    <p>
+      It enables manufacturers to streamline their operations,
+      increase efficiency, and improve overall productivity.
+    </p>
+
+    <ul class="flex flex-wrap gap-2 mt-2">
+      <li class="badge badge-primary print:!bg-transparent">
+        <AngularIcon />
+        <span>Angular 10</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <MaterialIcon />
+        <span>MaterialUI</span>
+      </li>
+    </ul>
+  </article>
+</Project>

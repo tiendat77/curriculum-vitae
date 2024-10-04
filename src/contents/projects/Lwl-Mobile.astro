@@ -1,0 +1,43 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import CapacitorIcon from '@/icons/capacitor.astro';
+import MaterialIcon from '@/icons/material.astro';
+---
+
+<Project
+  name="Leanwell Mobile App"
+  link=""
+  href=""
+  type="Work"
+  year="2019 - 2022"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      Hybrid apps for industrial tablets and mobile phones.
+    </p>
+
+    <p>
+      These apps enabled employees to check in/out, view their working time, order catering meals,
+      and track product quality by monitoring raw materials and works-in-progress throughout the production line.
+    </p>
+
+    <ul class="flex flex-wrap gap-2 mt-2">
+      <li class="badge badge-primary print:!bg-transparent">
+        <AngularIcon />
+        <span>Angular 10</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <MaterialIcon />
+        <span>MaterialUI</span>
+      </li>
+
+      <li class="badge badge-primary print:!bg-transparent">
+        <CapacitorIcon />
+        <span>CapacitorJS</span>
+      </li>
+    </ul>
+  </article>
+</Project>

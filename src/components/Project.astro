@@ -1,10 +1,10 @@
 ---
 interface Props {
   name: string;
-  link: string;
-  href: string;
-  type: 'Personal' | 'Work' | 'Open Source' | 'Freelance';
-  year: string;
+  link?: string;
+  href?: string;
+  type?: 'Personal' | 'Work' | 'Open Source' | 'Freelance';
+  year?: string;
 }
 
 const {
@@ -44,14 +44,18 @@ const {
       )}
     </h4>
 
-    <div class="badge badge-primary">
-      {type}
-    </div>
+    {type && (
+      <div class="badge badge-primary">
+        {type}
+      </div>
+    )}
   </div>
 
-  <p class="mt-1 text-xs text-neutral">
-    {year}
-  </p>
+  {year && (
+    <p class="mt-1 text-xs text-neutral">
+      {year}
+    </p>
+  )}
 
   <slot />
 </div>

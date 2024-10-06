@@ -1,0 +1,98 @@
+---
+import Project from '@/components/Project.astro';
+import Section from '@/components/Section.astro';
+---
+
+<Section title="Favourite Open Source">
+  <p class="text-neutral">
+    My favourite open-source that runs on my home lab
+  </p>
+
+  <div class="grid xl:grid-cols-2 gap-8 md:gap-4">
+    <div>
+      <div class="grid gap-8 md:gap-4">
+        <div>
+          <div class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
+            <Project name="Media System">
+              <article class="mt-2 text-sm">
+                <ul class="flex flex-col gap-2 list-disc pl-4">
+                  <li>
+                    <h6>
+                      Radarr -
+                      <a
+                        class="text-primary"
+                        target="_blank"
+                        href="https://github.com/Radarr/Radarr"
+                      >
+                        https://github.com/Radarr/Radarr
+                      </a>
+                    </h6>
+
+                    <article class="mt-1">
+                      <p>
+                        Radarr is a movie collection manager for Usenet and BitTorrent users.
+                        It can monitor multiple RSS feeds for new movies and will interface with
+                        clients and indexers to grab, sort, and rename them.
+                      </p>
+                    </article>
+                  </li>
+
+                  <li>
+                    <h6>
+                      Sonarr -
+                      <a
+                        class="text-primary"
+                        target="_blank"
+                        href="https://github.com/Sonarr/Sonarr"
+                      >
+                        https://github.com/Sonarr/Sonarr
+                      </a>
+                    </h6>
+
+                    <article class="mt-1">
+                      <p>
+                        Sonarr is a PVR for Usenet and BitTorrent users.
+                        It can monitor multiple RSS feeds for new episodes of your favorite
+                        shows and will grab, sort and rename them.
+                      </p>
+                    </article>
+                  </li>
+
+                  <li>
+                    <h6>
+                      Jellyfin -
+                      <a
+                        class="text-primary"
+                        target="_blank"
+                        href="https://github.com/jellyfin/jellyfin"
+                      >
+                        https://github.com/jellyfin/jellyfin
+                      </a>
+                    </h6>
+
+                    <article class="mt-1">
+                      <p>
+                        Jellyfin is a Free Software Media System that puts you in control
+                        of managing and streaming your media.
+                      </p>
+                    </article>
+                  </li>
+                </ul>
+              </article>
+            </Project>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div>
+      <div class="grid gap-8 md:gap-4">
+        <div>
+          <div class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</Section>

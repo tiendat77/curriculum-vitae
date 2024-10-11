@@ -1,0 +1,33 @@
+---
+import Project from '@/components/Project.astro';
+import AdGuardIcon from '@/icons/adguard.astro';
+---
+
+<Project name="Ad Blocking Service">
+  <div class="mt-4 mb-2">
+    <AdGuardIcon />
+  </div>
+
+  <h6>
+    AdGuard Home -
+    <a
+      class="text-primary"
+      target="_blank"
+      href="https://github.com/AdguardTeam/AdGuardHome"
+    >
+      https://github.com/AdguardTeam/AdGuardHome
+    </a>
+  </h6>
+
+  <article class="mt-4 text-sm">
+    <p>
+      AdGuard Home is a network-wide software for blocking ads and tracking.
+      After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.
+    </p>
+
+    <p>
+      It operates as a DNS server that re-routes tracking domains to a “black hole”,
+      thus preventing your devices from connecting to those servers.
+    </p>
+  </article>
+</Project>

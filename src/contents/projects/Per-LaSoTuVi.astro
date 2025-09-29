@@ -1,0 +1,47 @@
+---
+import Project from '@/components/Project.astro';
+
+import AngularIcon from "@/icons/angular.astro";
+import CapacitorIcon from '@/icons/capacitor.astro';
+import SupabaseIcon from "@/icons/supabase.astro";
+---
+
+<Project
+  name="La So Tu Vi"
+  link="lasotuvi.vercel.app"
+  href="https://lasotuvi.vercel.app/"
+  type="Personal"
+  year="2021"
+>
+  <article class="mt-2 text-sm">
+    <p>
+      La So Tu Vi is a web application that helps astrologers create a horoscope chart,
+      which can be used to interpret a person's destiny.
+      Nowadays, many people also use Tu Vi to choose the birth date and time for their children.
+    </p>
+
+    <p>
+      The analysis of the horoscope chart helps individuals understand a person's future
+      and fortunes for the coming years. The horoscope chart serves as a reference that can
+      help individuals avoid pitfalls and reinforce positive aspects of their lives, thereby
+      leading to a smooth and fortunate life.
+    </p>
+  </article>
+
+  <ul class="flex flex-wrap gap-2 mt-2">
+    <li class="badge badge-primary print:!bg-transparent">
+      <AngularIcon />
+      <span>Angular 12</span>
+    </li>
+
+    <li class="badge badge-primary print:!bg-transparent">
+      <CapacitorIcon />
+      <span>Capacitor</span>
+    </li>
+
+    <li class="badge badge-primary print:!bg-transparent">
+      <SupabaseIcon />
+      <span>Supabase</span>
+    </li>
+  </ul>
+</Project>

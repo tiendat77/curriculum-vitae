@@ -1,6 +1,8 @@
 ---
 import Section from '@/components/Section.astro';
 
+import BlsKioskOrdering from './projects/Bls-KioskOrdering.astro';
+import BlsOnlineOrdering from './projects/Bls-OnlineOrdering.astro';
 import BlsBlogicView from './projects/Bls-BlogicView.astro';
 import BlsBooking from './projects/Bls-Booking.astro';
 import BlsLicenses from './projects/Bls-Licenses.astro';
@@ -13,6 +15,18 @@ import LwlMobile from './projects/Lwl-Mobile.astro';
   <div class="grid xl:grid-cols-2 gap-8 md:gap-4">
     <div>
       <div class="grid gap-8 md:gap-4">
+        <div>
+          <div class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
+            <BlsOnlineOrdering />
+          </div>
+        </div>
+
+        <div>
+          <div class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
+            <BlsKioskOrdering />
+          </div>
+        </div>
+
         <div>
           <div class="space-y-2 rounded-md sm:p-2 md:p-4 md:border">
             <BlsWaitAndOrder />

@@ -95,6 +95,6 @@
   }
 
   .badge-primary {
-    @apply text-primary bg-primary-100 border-primary;
+    @apply text-primary bg-primary-100 border-primary dark:bg-primary-900 dark:bg-opacity-50;
   }
 }

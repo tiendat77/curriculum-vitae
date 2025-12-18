@@ -46,6 +46,11 @@
     }
   }
 
+  [data-theme="dark"] {
+    *, ::before, ::after {
+      border-color: rgba(61, 68, 77, 0.8);
+    }
+  }
 }
 
 @layer utilities {
@@ -95,6 +100,6 @@
   }
 
   .badge-primary {
-    @apply text-primary bg-primary-100 border-primary dark:bg-primary-900 dark:bg-opacity-50;
+    @apply text-primary bg-primary-100 border-primary-300 dark:text-primary-400 dark:bg-primary-900 dark:bg-opacity-50;
   }
 }

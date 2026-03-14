@@ -1,0 +1,55 @@
+---
+import Timeline from "@/components/Timeline.astro";
+
+import AngularIcon from "@/icons/angular.astro";
+---
+
+<Timeline from="2026-03-02" to="">
+  <h3>
+    <span>Front-end Developer</span>
+
+    <span>@</span>
+
+    <a
+      target="_blank"
+      href="https://www.dxc.com/"
+      class="group/link text-primary"
+    >
+      DXC Technology
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+        class="ml-1 transition-transform translate-y-px icon-size-4 shrink-0 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+      >
+        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  </h3>
+
+  <div class="mt-2 text-xs text-neutral">
+    Digital Transformation - Ho Chi Minh City
+  </div>
+
+  <div class="flex flex-col gap-4 mt-6 text-sm">
+    <div class="flex flex-col gap-2">
+      <ul class="flex flex-col gap-2 pl-4 list-disc">
+        <li>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <h4>Tools & platforms we use:</h4>
+
+      <ul class="flex flex-wrap gap-2">
+        <li class="badge badge-primary print:!bg-transparent">
+          <AngularIcon />
+          <span>Angular</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Timeline>

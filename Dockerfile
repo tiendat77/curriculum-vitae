@@ -1,16 +1,15 @@
 # Build Stage 1
-FROM node:19-alpine AS build
+FROM node:24-alpine AS build
 WORKDIR /usr/src/app
-COPY package.json ./
-RUN npm install
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
 COPY ./src ./src
 COPY ./public ./public
 COPY astro.config.mjs ./
-COPY tailwind.config.cjs ./
 COPY tsconfig.json ./
 
-RUN npm run build
+RUN yarn build
 
 # Build Stage 2
 FROM nginx:alpine

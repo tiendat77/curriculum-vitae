@@ -113,7 +113,7 @@
   box-sizing: content-box;
   overflow: hidden;
   background: transparent;
-  border-bottom: 1px solid oklch(var(--n));
+  border-bottom: 1px solid var(--color-neutral);
   height: .25em;
   padding: 0;
   margin: 5em 0;
@@ -160,7 +160,7 @@
 .markdown blockquote {
   margin: 0;
   padding: 0 1em;
-  border-left: .25em solid oklch(var(--n));
+  border-left: .25em solid var(--color-neutral);
 }
 
 .markdown ol ol,

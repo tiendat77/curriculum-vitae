@@ -10,31 +10,36 @@
     "preview": "astro preview",
     "astro": "astro",
     "commit": "git-cz",
-    "prepare": "husky install"
+    "prepare": "husky",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.5",
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.15.4",
-    "lodash": "^4.17.21",
-    "tailwindcss": "^3.2.7"
+    "@astrojs/markdown-satteri": "^0.4.2",
+    "@astrojs/mdx": "^8.0.2",
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.4",
-    "@commitlint/config-conventional": "^17.4.4",
-    "@commitlint/cz-commitlint": "^17.4.4",
-    "@tailwindcss/typography": "^0.5.9",
-    "@typescript-eslint/parser": "^5.55.0",
-    "chroma-js": "^3.1.1",
-    "commitizen": "^4.3.0",
-    "daisyui": "^4.12.10",
-    "eslint": "^8.36.0",
-    "eslint-plugin-astro": "^0.26.0",
-    "husky": "^8.0.3",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.8.0",
-    "prettier-plugin-tailwindcss": "^0.6.6"
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "@commitlint/cz-commitlint": "^21.2.3",
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/node": "^26.6.4",
+    "@typescript-eslint/parser": "^8.71.0",
+    "commitizen": "^4.3.2",
+    "daisyui": "^5.7.47",
+    "eslint": "^10.12.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "globals": "^17.13.0",
+    "husky": "^9.1.7",
+    "inquirer": "^12",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript": "^6"
   },
   "config": {
     "commitizen": {

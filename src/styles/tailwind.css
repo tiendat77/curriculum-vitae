@@ -168,16 +168,17 @@
 
   @page {
     size: A4 portrait;
+    margin: 12mm 15mm;
   }
 
   @media print {
     page[size="A4"] {
-      width: 210mm;
-      height: 297mm;
+      width: 100%;
+      height: auto;
     }
 
     html, body {
-      font-size: 12px;
+      font-size: 13px;
       size: A4 portrait;
     }
 

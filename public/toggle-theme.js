@@ -51,6 +51,21 @@ window.onload = () => {
   });
 };
 
+// Always print in light mode (covers Ctrl+P as well as the print button), then restore the theme.
+let themeBeforePrint = null;
+
+window.addEventListener("beforeprint", () => {
+  themeBeforePrint = document.documentElement.getAttribute("data-theme");
+  document.documentElement.setAttribute("data-theme", "light");
+});
+
+window.addEventListener("afterprint", () => {
+  if (themeBeforePrint) {
+    document.documentElement.setAttribute("data-theme", themeBeforePrint);
+    themeBeforePrint = null;
+  }
+});
+
 // sync with system changes
 window
   .matchMedia("(prefers-color-scheme: dark)")

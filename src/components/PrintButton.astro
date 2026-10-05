@@ -8,14 +8,8 @@
 </button>
 
 <script>
-  document?.querySelector('[data-print-button]')?.addEventListener('click', () => {
-    // Turn off dark mode
-    document.documentElement.setAttribute("data-theme", "light");
-
-    // Set the theme button to light
-    document.querySelector("#theme-btn").checked = false;
-
-    // Print the page
+  // The light theme is forced by the beforeprint handler in public/toggle-theme.js
+  document.querySelector('[data-print-button]')?.addEventListener('click', () => {
     window.print();
   });
 </script>

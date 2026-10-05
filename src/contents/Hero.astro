@@ -4,7 +4,7 @@ import Section from "@/components/Section.astro";
 
 <Section>
   <div class="flex flex-col gap-8">
-    <figure class="flex justify-center my-0 not-prose flex-0">
+    <figure class="flex justify-center my-0 not-prose flex-0 print:hidden!">
       <div class="relative w-28 h-28 sm:w-36 sm:h-36">
         <div class="absolute z-0 w-full h-full rounded-full -top-8 -left-14 bg-primary-200/30 dark:bg-slate-700 print:-top-4! print:-left-12!"></div>
 
@@ -37,9 +37,9 @@ import Section from "@/components/Section.astro";
           />
         </svg>
 
-        <a class="text-current">
+        <span class="text-current">
           Thu Duc, Ho Chi Minh City
-        </a>
+        </span>
       </p>
     </div>
   </div>

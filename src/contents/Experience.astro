@@ -1,22 +1,27 @@
 ---
 import Section from "@/components/Section.astro";
 
+import DXC from "./experiences/DXC.astro";
 import Blogicsystems from "./experiences/Blogicsystems.astro";
 import LeanwellTech from "./experiences/Leanwell-Tech.astro";
 import FptSoftware from "./experiences/Fpt-Software.astro";
 ---
 
-<Section title="Career Journey">
+<Section title="Work Experience">
   <ul class="flex flex-col">
-    <li class="relative print:py-2 break-before-auto">
+    <li class="relative print:static print:py-2 break-before-auto">
+      <DXC />
+    </li>
+
+    <li class="relative print:static print:py-2 break-before-auto">
       <Blogicsystems />
     </li>
 
-    <li class="relative print:py-2 break-before-page">
+    <li class="relative print:static print:py-2 break-before-auto">
       <LeanwellTech />
     </li>
 
-    <li class="relative print:py-2 break-before-auto">
+    <li class="relative print:static print:py-2 break-before-auto">
       <FptSoftware />
     </li>
   </ul>

@@ -19,110 +19,66 @@ import VsCodeIcon from "@/icons/vs-code-color.astro";
 import ReactIcon from "@/icons/react-color.astro";
 import NextjsIcon from "@/icons/nextjs-color.astro";
 import CursorIcon from "@/icons/cursor.astro";
+import CapacitorIcon from "@/icons/capacitor.astro";
+import NxIcon from "@/icons/nx.astro";
+import SignalrIcon from "@/icons/signalr.astro";
+
+// Single source for both the web badges and the print-only plain-text list (ATS-friendly).
+const groups = [
+  {
+    title: "Languages and frameworks",
+    skills: [
+      { name: "Angular", Icon: AngularIcon },
+      { name: "React", Icon: ReactIcon },
+      { name: "Next.js", Icon: NextjsIcon },
+      { name: "Astro", Icon: AstroIcon },
+      { name: "Tailwind CSS", Icon: TailwindIcon },
+      { name: "JavaScript", Icon: JavascriptIcon },
+      { name: "TypeScript", Icon: TypescriptIcon },
+      { name: "Node.js", Icon: NodeJsIcon },
+      { name: "Ionic" },
+      { name: "Capacitor", Icon: CapacitorIcon },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      { name: "VS Code", Icon: VsCodeIcon },
+      { name: "Cursor", Icon: CursorIcon },
+      { name: "Git", Icon: GitIcon },
+      { name: "Nx", Icon: NxIcon },
+      { name: "SignalR", Icon: SignalrIcon },
+      { name: "Ubuntu", Icon: UbuntuIcon },
+      { name: "Docker", Icon: DockerIcon },
+      { name: "Nginx", Icon: NginxIcon },
+      { name: "Jenkins", Icon: JenkinsIcon },
+      { name: "Figma", Icon: FigmaIcon },
+      { name: "Inkscape", Icon: InscapeIcon },
+      { name: "Arduino", Icon: ArduinoIcon },
+    ],
+  },
+];
 ---
 
 <Section title="Skills">
   <div class="grid xl:grid-cols-2 gap-8 md:gap-4">
-    <div>
-      <h4 class="mb-4">Languages and frameworks</h4>
+    {groups.map(({ title, skills }) => (
+      <div>
+        <h4 class="mb-4 print:mb-1!">{title}</h4>
 
-      <ul class="flex flex-wrap gap-2 mt-2">
-        <li class="badge badge-lg print:bg-transparent!">
-          <AngularIcon />
-          <span class="font-semibold">Angular</span>
-        </li>
+        <ul class="flex flex-wrap gap-2 mt-2 print:hidden">
+          {skills.map(({ name, Icon }) => (
+            <li class="badge badge-lg">
+              {Icon && <Icon />}
+              <span class="font-semibold">{name}</span>
+            </li>
+          ))}
+        </ul>
 
-        <li class="badge badge-lg print:bg-transparent!">
-          <ReactIcon />
-          <span class="font-semibold">ReactJs</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <NextjsIcon />
-          <span class="font-semibold">Next.js</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <AstroIcon />
-          <span class="font-semibold">Astro</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <TailwindIcon />
-          <span class="font-semibold">Tailwind</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <JavascriptIcon />
-          <span class="font-semibold">Javascript</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <TypescriptIcon />
-          <span class="font-semibold">Typescript</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <NodeJsIcon />
-          <span class="font-semibold">NodeJs</span>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="mb-4">Tools</h4>
-
-      <ul class="flex flex-wrap gap-2 mt-2">
-        <li class="badge badge-lg print:bg-transparent!">
-          <VsCodeIcon />
-          <span class="font-semibold">Vs Code</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <CursorIcon />
-          <span class="font-semibold">Cursor</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <GitIcon />
-          <span class="font-semibold">Git</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <UbuntuIcon />
-          <span class="font-semibold">Ubuntu</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <DockerIcon />
-          <span class="font-semibold">Docker</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <NginxIcon />
-          <span class="font-semibold">Nginx</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <JenkinsIcon />
-          <span class="font-semibold">Jenkins</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <FigmaIcon />
-          <span class="font-semibold">Figma</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <InscapeIcon />
-          <span class="font-semibold">Inkscape</span>
-        </li>
-
-        <li class="badge badge-lg print:bg-transparent!">
-          <ArduinoIcon />
-          <span class="font-semibold">Arduino</span>
-        </li>
-      </ul>
-    </div>
+        <p class="hidden mb-0! text-sm print:block">
+          {skills.map((skill) => skill.name).join(", ")}
+        </p>
+      </div>
+    ))}
   </div>
 </Section>

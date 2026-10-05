@@ -43,6 +43,19 @@ const {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Tien Dat Huynh",
+        jobTitle: "Front-end Software Engineer",
+        url,
+        address: { "@type": "PostalAddress", addressLocality: "Thu Duc, Ho Chi Minh City", addressCountry: "VN" },
+        sameAs: ["https://github.com/tiendat77", "https://www.linkedin.com/in/dat-huynh-354b32190"],
+      })}
+    />
+
     <!-- Scripts -->
     <script is:inline src="/toggle-theme.js"></script>
   </head>

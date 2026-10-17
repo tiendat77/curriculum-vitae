@@ -12,15 +12,15 @@ const fromFormatted = formatDate(from);
 const toFormatted = formatDate(to);
 ---
 
-<div class="group relative print:static grid print:grid-cols-1! print:[&_li]:break-inside-avoid sm:grid-cols-12">
+<div class="group relative print:static grid grid-cols-1 print:[&_li]:break-inside-avoid">
   <!-- Time Info -->
-  <header class="relative print:static mt-1 text-xs font-semibold sm:col-span-3">
+  <header class="relative print:static mt-1 text-xs font-semibold">
     <time datetime={from}>{fromFormatted}</time>
     <span>-</span>
     <time datetime={to}>{toFormatted}</time>
   </header>
 
-  <div class="relative print:static flex flex-col pb-6 sm:col-span-9">
+  <div class="relative print:static flex flex-col pb-6">
     <div class="-ml-6 w-px print:hidden absolute bg-slate-300 dark:bg-slate-500 h-full mt-2">
       <!-- The Time line -->
     </div>

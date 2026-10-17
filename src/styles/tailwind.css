@@ -74,7 +74,18 @@
   --noise: 0;
 }
 
-@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+/* The paper is pinned to data-theme="light", so dark: must not leak into it. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *):not(:where([data-theme="light"], [data-theme="light"] *)));
+
+@custom-variant print {
+  @media print {
+    @slot;
+  }
+
+  &:where(.a4-paper-container, .a4-paper-container *) {
+    @slot;
+  }
+}
 
 /* Generate at: https://uicolors.app */
 @theme {
@@ -138,6 +149,38 @@
   line-height: calc(var(--spacing) * --value(number));
 }
 
+@utility no-print {
+  @media print {
+    display: none !important;
+  }
+}
+
+/* A4 sheet: 210mm wide with the same 12mm/15mm margins as @page, so screen wraps like print. */
+@utility a4-paper-container {
+  position: relative;
+  box-sizing: border-box;
+  width: min(210mm, 100%);
+  min-height: 297mm;
+  margin-inline: auto;
+  padding: 12mm clamp(1rem, 6vw, 15mm);
+  color: var(--color-base-content);
+  background: var(--color-base-100);
+  border-radius: 0.25rem;
+  /* 1px ring instead of a border so the content box stays exactly 180mm wide, like print. */
+  box-shadow: 0 0 0 1px var(--color-gray-200), 0 10px 25px -5px rgb(0 0 0 / 0.1);
+
+  @media print {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
 @layer base {
 
   *,
@@ -148,8 +191,9 @@
     border-color: var(--color-gray-200, currentColor);
   }
 
+  /* Same root size on screen and print so the sheet wraps identically. */
   html {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   body {
@@ -178,17 +222,20 @@
     }
 
     html, body {
-      font-size: 13px;
       size: A4 portrait;
+      background: none !important;
+      padding: 0 !important;
     }
+  }
 
-    h1, h2, h3, h4, h5 {
-      page-break-after: avoid;
-    }
+  h1, h2, h3, h4, h5 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
 
-    table, figure {
-      page-break-inside: avoid;
-    }
+  table, figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   [data-theme="dark"] {

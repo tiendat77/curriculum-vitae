@@ -1,0 +1,18 @@
+---
+import PrintButton from '@/components/PrintButton.astro';
+import ThemeToggle from '@/components/ThemeToggle.astro';
+---
+
+<div class="no-print sticky top-0 z-20 mx-auto mb-4 w-[min(210mm,100%)] pt-4">
+  <div class="flex flex-wrap items-center justify-between gap-2 rounded-box border border-base-300 bg-base-100/90 px-3 py-2 shadow-sm backdrop-blur">
+    <span class="badge badge-primary gap-2">
+      <span class="inline-block size-2 rounded-full bg-primary"></span>
+      A4 Document Preview Mode
+    </span>
+
+    <div class="flex items-center gap-2">
+      <PrintButton />
+      <!-- <ThemeToggle /> -->
+    </div>
+  </div>
+</div>

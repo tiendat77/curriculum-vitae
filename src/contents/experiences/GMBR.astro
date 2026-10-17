@@ -1,0 +1,40 @@
+---
+import Timeline from "@/components/Timeline.astro";
+
+import AngularIcon from "@/icons/angular.astro";
+import NxIcon from "@/icons/nx.astro";
+import ReactIcon from "@/icons/react.astro";
+---
+
+<Timeline from="2026-05-01" to="">
+  <h3>
+    <span>Front-end & Mobile Developer</span>
+
+    <span>@</span>
+
+    <span>GMBR</span>
+  </h3>
+
+  <div class="flex flex-col gap-4 mt-6 text-sm">
+    <div class="flex flex-col gap-2">
+      <h4>Tools & platforms we use:</h4>
+
+      <ul class="flex flex-wrap gap-2">
+        <li class="badge badge-primary print:bg-transparent!">
+          <AngularIcon />
+          <span>Angular</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <NxIcon />
+          <span>Nx</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <ReactIcon />
+          <span>React Native</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Timeline>

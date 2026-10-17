@@ -1,6 +1,7 @@
 ---
 import Section from "@/components/Section.astro";
 
+import GMBR from "./experiences/GMBR.astro";
 import DXC from "./experiences/DXC.astro";
 import Blogicsystems from "./experiences/Blogicsystems.astro";
 import LeanwellTech from "./experiences/Leanwell-Tech.astro";
@@ -9,19 +10,23 @@ import FptSoftware from "./experiences/Fpt-Software.astro";
 
 <Section title="Work Experience">
   <ul class="flex flex-col">
-    <li class="relative print:static print:py-2 break-before-auto">
+    <li class="relative print:static print:py-2 break-before-auto break-inside-avoid">
+      <GMBR />
+    </li>
+
+    <li class="relative print:static print:py-2 break-before-auto break-inside-avoid">
       <DXC />
     </li>
 
-    <li class="relative print:static print:py-2 break-before-auto">
+    <li class="relative print:static print:py-2 break-before-auto break-inside-avoid">
       <Blogicsystems />
     </li>
 
-    <li class="relative print:static print:py-2 break-before-auto">
+    <li class="relative print:static print:py-2 break-before-auto break-inside-avoid">
       <LeanwellTech />
     </li>
 
-    <li class="relative print:static print:py-2 break-before-auto">
+    <li class="relative print:static print:py-2 break-before-auto break-inside-avoid">
       <FptSoftware />
     </li>
   </ul>

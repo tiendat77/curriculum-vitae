@@ -60,9 +60,13 @@ const {
     <script is:inline src="/toggle-theme.js"></script>
   </head>
 
-  <body class="bg-base-100 xl:bg-base-200 print:bg-transparent!">
-    <page size="A4" class="relative w-full flex-auto sm:flex-none mx-auto max-w-7xl xl:my-12 print:max-w-none! print:mx-0! print:my-0!">
-      <slot />
+  <body class="bg-base-200 text-base-content print:bg-transparent!">
+    <page size="A4" class="relative mx-auto w-full flex-auto px-4 pb-12 print:max-w-none! print:p-0!">
+      <slot name="toolbar" />
+
+      <div data-theme="light" class="a4-paper-container">
+        <slot />
+      </div>
     </page>
   </body>
 </html>

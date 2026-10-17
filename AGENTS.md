@@ -102,6 +102,10 @@ layouts/Layout.astro        (imports config.ts and styles/index.css only)
 - Important modifier uses the **v4 trailing syntax**: `print:bg-transparent!`, `print:grid-cols-1!` (not `!print:…`).
 - Use semantic daisyUI/theme tokens (`bg-base-100`, `text-primary`, `text-neutral`, `badge badge-primary`) rather than hard-coded hex colors, so light and dark themes keep working. Dark variant is `data-theme="dark"` via the custom `dark` variant, not the `.dark` class.
 - Every visual change must be checked for **print** (A4 portrait). Use `print:` variants; hide interactive UI with `print:hidden`/`print:hidden!`; control pagination with `break-before-*`, `page-break-*`.
+- **Screen = print (A4 paper preview).** All content renders inside `.a4-paper-container` (210mm sheet, same 12mm/15mm margins as `@page`, root font-size 13px on both). The custom `print:` variant applies in real print **and** anywhere inside the paper on screen (`tailwind.css`), so `print:hidden!` hides content on the web page too. Consequences:
+  - Do **not** use viewport breakpoints (`sm:`/`md:`/`xl:`) in paper content; print never evaluates them at desktop widths, so they would make screen differ from print.
+  - UI that lives **outside** the paper (toolbar, canvas) is hidden in print with the `no-print` utility (or `print:` classes on `<body>`/`<page>`, which only match real print), never by `print:hidden!` inside the paper.
+  - The paper is pinned to `data-theme="light"`; the `dark` variant excludes light-pinned scopes so `dark:` never leaks into it. Only the canvas and toolbar follow the theme.
 - Prefer utility classes inline. New custom CSS is a last resort and goes in `tailwind.css` (see Don'ts regarding global styles).
 - Class ordering is handled by `prettier-plugin-tailwindcss`; don't hand-sort.
 
@@ -158,7 +162,7 @@ The Dockerfile copies only `package.json`, `yarn.lock`, `src/`, `public/`, `astr
 - **Verify before delivering.** Run `yarn build` and `yarn lint` and report their real output. If you cannot run them, say so explicitly.
 - **Read before editing.** Open the sibling file (e.g. another `experiences/*.astro`) and copy its structure, class names, and badge markup exactly.
 - **Keep content factual.** Résumé content is the owner's personal history. Only edit employers, dates, titles, metrics, skills, and contact details when the user supplies the facts. Never fabricate achievements, technologies, or dates.
-- **Preserve print/A4 behavior** (`print:` classes, `break-before-*`, `page[size="A4"]` rules, hidden toolbars) and dark/light theming on every UI change.
+- **Preserve print/A4 behavior** (`print:` classes, `break-before-*`, `page[size="A4"]` rules, `.a4-paper-container`, `no-print` toolbar) and dark/light theming on every UI change.
 - **Preserve performance characteristics:** static output, no hydration, `compressHTML`, `is:inline` theme script in `<head>`, `preconnect` + `display=swap` for fonts, small inline SVG icons (no icon font or heavy icon library).
 - **Maintain separation of concerns:** facts in `contents/`, presentation in `components/`, tokens/theme in `styles/tailwind.css`, site metadata in `config.ts`.
 - **Keep SEO/meta intact:** `Layout.astro` props default to `SITE`; keep `<title>`, description, OG tags, and `site` in `astro.config.mjs` consistent.

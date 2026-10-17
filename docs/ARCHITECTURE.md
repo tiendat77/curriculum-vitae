@@ -88,7 +88,7 @@ Dependencies point downward only. A component never imports from `contents/`.
 | --- | --- |
 | Content | Immutable at build time (props to templates to HTML) |
 | Theme (the only runtime state) | `localStorage["theme"]` (`light` or `dark`) mirrored to `<html data-theme>` by `public/toggle-theme.js`. The checkbox `#theme-btn` in `ThemeToggle.astro` drives it. The initial value is the stored value, else `prefers-color-scheme`. The script also listens for OS theme changes. |
-| Print | `PrintButton.astro` sets the theme to light, unchecks the toggle and calls `window.print()`. `@media print` rules in `tailwind.css` and `print:` utilities then take over. |
+| Print / paper preview | The page is an A4 sheet (`.a4-paper-container`, 210mm, 12mm/15mm padding matching `@page`) on a neutral canvas, topped by a sticky `.no-print` toolbar (`PreviewToolbar.astro`: mode badge, `PrintButton`, `ThemeToggle`). The `print:` variant is overridden in `tailwind.css` to also apply inside the sheet on screen, so web view and PDF share one layout; paper content therefore uses no viewport breakpoints. The sheet is pinned to the light theme. `PrintButton.astro` calls `window.print()`; `toggle-theme.js` forces light on `beforeprint`. |
 
 The theme script is loaded `is:inline` in `<head>` so `data-theme` is set before first paint, which avoids a flash of the wrong theme. Keep that script's position and the `#theme-btn` id stable.
 

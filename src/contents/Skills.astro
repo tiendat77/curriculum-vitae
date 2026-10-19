@@ -2,89 +2,97 @@
 import Section from "@/components/Section.astro";
 
 import AngularIcon from "@/icons/angular-color.astro";
-import AstroIcon from "@/icons/astro-color.astro";
+import ReactIcon from "@/icons/react-color.astro";
 import TailwindIcon from "@/icons/tailwind-color.astro";
 import TypescriptIcon from "@/icons/typescript-color.astro";
-import JavascriptIcon from "@/icons/javascript-color.astro";
-import NodeJsIcon from "@/icons/node-color.astro";
-import UbuntuIcon from "@/icons/ubuntu-color.astro";
-import DockerIcon from "@/icons/docker-color.astro";
-import JenkinsIcon from "@/icons/jenkins-color.astro";
-import FigmaIcon from "@/icons/figma-color.astro";
-import InscapeIcon from "@/icons/inkscape-color.astro";
-import ArduinoIcon from "@/icons/arduino-color.astro";
-import NginxIcon from "@/icons/nginx-color.astro";
-import GitIcon from "@/icons/git-color.astro";
-import VsCodeIcon from "@/icons/vs-code-color.astro";
-import ReactIcon from "@/icons/react-color.astro";
-import NextjsIcon from "@/icons/nextjs-color.astro";
-import CursorIcon from "@/icons/cursor.astro";
-import CapacitorIcon from "@/icons/capacitor.astro";
 import NxIcon from "@/icons/nx.astro";
-import SignalrIcon from "@/icons/signalr.astro";
-import NativewindIcon from "@/icons/nativewind.astro";
-import TanstackQueryIcon from "@/icons/tanstack-query.astro";
+import ClaudeCodeIcon from "@/icons/claude-code.astro";
+import AntigravityIcon from "@/icons/antigravity.astro";
+import CursorIcon from "@/icons/cursor.astro";
 
-// Single source for both the web badges and the print-only plain-text list (ATS-friendly).
+// `core` skills render emphasised (bold, primary colour); an optional Icon shows beside any skill.
+// Everything is real text (comma separated) so ATS parsers read it as-is.
 const groups = [
   {
-    title: "Languages and frameworks",
+    title: "Frontend",
     skills: [
-      { name: "Angular", Icon: AngularIcon },
-      { name: "React", Icon: ReactIcon },
-      { name: "React Native", Icon: ReactIcon },
-      { name: "Next.js", Icon: NextjsIcon },
-      { name: "Astro", Icon: AstroIcon },
-      { name: "Tailwind CSS", Icon: TailwindIcon },
-      { name: "NativeWind", Icon: NativewindIcon },
-      { name: "TanStack Query", Icon: TanstackQueryIcon },
-      { name: "Zustand" },
-      { name: "JavaScript", Icon: JavascriptIcon },
-      { name: "TypeScript", Icon: TypescriptIcon },
-      { name: "Node.js", Icon: NodeJsIcon },
+      { name: "Angular", Icon: AngularIcon, core: true },
+      { name: "TypeScript", Icon: TypescriptIcon, core: true },
+      { name: "React", Icon: ReactIcon, core: true },
+      { name: "Tailwind CSS", Icon: TailwindIcon, core: true },
+      { name: "JavaScript" },
+      { name: "Next.js" },
+      { name: "Astro" },
+    ],
+  },
+  {
+    title: "Mobile",
+    skills: [
+      { name: "React Native", Icon: ReactIcon, core: true },
+      { name: "Capacitor" },
       { name: "Ionic" },
-      { name: "Capacitor", Icon: CapacitorIcon },
+      { name: "NativeWind" },
+    ],
+  },
+  {
+    title: "Architecture",
+    skills: [
+      { name: "Nx", Icon: NxIcon, core: true },
+      { name: "Feature-Sliced Design" },
+    ],
+  },
+  {
+    title: "State & data",
+    skills: [
+      { name: "TanStack Query" },
+      { name: "Zustand" },
+      { name: "SignalR" },
+    ],
+  },
+  {
+    title: "Backend & DevOps",
+    skills: [
+      { name: "Node.js" },
+      { name: "Docker" },
+      { name: "Jenkins" },
+      { name: "Nginx" },
+    ],
+  },
+  {
+    title: "AI-assisted dev",
+    skills: [
+      { name: "Claude Code", Icon: ClaudeCodeIcon },
+      { name: "Antigravity", Icon: AntigravityIcon },
+      { name: "Cursor", Icon: CursorIcon },
     ],
   },
   {
     title: "Tools",
     skills: [
-      { name: "VS Code", Icon: VsCodeIcon },
-      { name: "Cursor", Icon: CursorIcon },
-      { name: "Git", Icon: GitIcon },
-      { name: "Nx", Icon: NxIcon },
-      { name: "SignalR", Icon: SignalrIcon },
-      { name: "Ubuntu", Icon: UbuntuIcon },
-      { name: "Docker", Icon: DockerIcon },
-      { name: "Nginx", Icon: NginxIcon },
-      { name: "Jenkins", Icon: JenkinsIcon },
-      { name: "Figma", Icon: FigmaIcon },
-      { name: "Inkscape", Icon: InscapeIcon },
-      { name: "Arduino", Icon: ArduinoIcon },
+      { name: "Git" },
+      { name: "Figma" },
     ],
   },
 ];
 ---
 
 <Section title="Skills">
-  <div class="grid gap-8">
+  <dl class="flex flex-col gap-2 mb-0 text-sm">
     {groups.map(({ title, skills }) => (
-      <div class="break-inside-avoid">
-        <h4 class="mb-4 print:mb-1!">{title}</h4>
+      <div class="grid grid-cols-[8rem_1fr] gap-4 break-inside-avoid">
+        <dt class="font-semibold text-neutral">{title}</dt>
 
-        <ul class="flex flex-wrap gap-2 mt-2 print:hidden">
-          {skills.map(({ name, Icon }) => (
-            <li class="badge badge-lg">
-              {Icon && <Icon />}
-              <span class="font-semibold">{name}</span>
-            </li>
+        <dd class="m-0">
+          {skills.map(({ name, Icon, core }, index) => (
+            <>
+              <span class:list={["inline-flex items-center gap-1 align-middle", core && "font-semibold text-primary"]}>
+                {Icon && <Icon />}
+                <span>{name}</span>
+              </span>{index < skills.length - 1 && ", "}
+            </>
           ))}
-        </ul>
-
-        <p class="hidden mb-0! text-sm print:block">
-          {skills.map((skill) => skill.name).join(", ")}
-        </p>
+        </dd>
       </div>
     ))}
-  </div>
+  </dl>
 </Section>

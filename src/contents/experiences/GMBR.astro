@@ -4,18 +4,54 @@ import Timeline from "@/components/Timeline.astro";
 import AngularIcon from "@/icons/angular.astro";
 import NxIcon from "@/icons/nx.astro";
 import ReactIcon from "@/icons/react.astro";
+import TypescriptIcon from "@/icons/typescript.astro";
+import TailwindIcon from "@/icons/tailwind.astro";
+import FsdIcon from "@/icons/fsd.astro";
+import TanstackQueryIcon from "@/icons/tanstack-query.astro";
+import NativewindIcon from "@/icons/nativewind.astro";
 ---
 
-<Timeline from="2026-05-01" to="">
+<Timeline from="2026-05-02" to="">
   <h3>
-    <span>Front-end & Mobile Developer</span>
+    <span>Front-end Software Engineer</span>
 
     <span>@</span>
 
-    <span>GMBR</span>
+    <a
+      target="_blank"
+      href="https://giacmobayre.vn/"
+      class="group/link text-primary"
+    >
+      GMBR (Giấc mơ bay rẻ)
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+        class="ml-1 print:hidden transition-transform translate-y-px icon-size-4 shrink-0 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+      >
+        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+      </svg>
+    </a>
   </h3>
 
+  <div class="mt-2 text-xs text-neutral">
+    F1 Airline Ticketing Agency & Flight Booking Platform - Xuan Hoa, Ho Chi Minh
+  </div>
+
   <div class="flex flex-col gap-4 mt-6 text-sm">
+    <div class="flex flex-col gap-2">
+      <ul class="flex flex-col gap-2 pl-4 list-disc">
+        <li>
+          Enterprise web architecture and maintenance: maintained a large-scale flight booking ecosystem built on Angular 15 and an Nx monorepo, managing 100+ modular libraries to ensure clean architecture, high performance, and system reliability.
+        </li>
+        <li>
+          Mobile architecture and greenfield setup: bootstrapped and structured the cross-platform React Native mobile app from scratch using Feature-Sliced Design (FSD), with TanStack Query for server state, Zustand for lightweight global state, and NativeWind for utility-first styling. Ported core shared web modules to mobile to accelerate multi-platform delivery.
+        </li>
+      </ul>
+    </div>
+
     <div class="flex flex-col gap-2">
       <h4>Tools & platforms we use:</h4>
 
@@ -33,6 +69,35 @@ import ReactIcon from "@/icons/react.astro";
         <li class="badge badge-primary print:bg-transparent!">
           <ReactIcon />
           <span>React Native</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <FsdIcon />
+          <span>Feature-Sliced Design (FSD)</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <TanstackQueryIcon />
+          <span>TanStack Query</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <span>Zustand</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <NativewindIcon />
+          <span>NativeWind</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <TypescriptIcon />
+          <span>TypeScript</span>
+        </li>
+
+        <li class="badge badge-primary print:bg-transparent!">
+          <TailwindIcon />
+          <span>Tailwind CSS</span>
         </li>
       </ul>
     </div>

@@ -45,5 +45,8 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
+  },
+  "resolutions": {
+    "vite": "^8.3.3"
   }
 }

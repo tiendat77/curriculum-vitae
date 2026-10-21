@@ -16,9 +16,11 @@ import Skills from "@/contents/Skills.astro";
 
   <main class="markdown grid grid-cols-1 gap-6">
     <div class="space-y-6">
-      <Hero />
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-6">
+        <Hero />
+        <Contact />
+      </div>
       <About />
-      <Contact />
     </div>
 
     <Skills />
@@ -28,7 +30,11 @@ import Skills from "@/contents/Skills.astro";
       <Education />
     </div>
 
-    <WorkProjects />
-    <PersonalProjects />
+    <div class="print:hidden!">
+      <WorkProjects />
+    </div>
+    <div class="break-before-page">
+      <PersonalProjects />
+    </div>
   </main>
 </Layout>

@@ -73,8 +73,8 @@ layouts/Layout.astro        (imports config.ts and styles/index.css only)
 | Add a job | Create `src/contents/experiences/<Company>.astro` using `<Timeline from="YYYY-MM-DD" to="">` (empty `to` = "Present"); import and add an `<li>` in `contents/Experience.astro` in reverse-chronological order. Mind the `break-before-page` / `break-before-auto` print classes. |
 | Add a project | Create `src/contents/projects/<Prefix>-<Name>.astro` (`Per-` personal, `Bls-`/`Lwl-` work, by employer prefix) using `<Project>`; register it in `PersonalProjects.astro` or `WorkProjects.astro`. |
 | Add an open-source item | `src/contents/favourite-open-source/<Name>.astro`; register in `FavouriteOpenSource.astro`. |
-| Add a tech icon | `src/icons/<tech>.astro` (plus `<tech>-color.astro` for the colored variant used in Skills). Copy an existing icon's structure; keep SVGs `currentColor` unless it is a `-color` variant. |
-| Add a skill | Edit `src/contents/Skills.astro` (uses `-color` icons and `badge badge-lg`). |
+| Add a tech icon | `src/icons/<tech>.astro`. Copy an existing icon's structure; keep SVGs `currentColor` unless it is a `-color` variant. |
+| Add a skill | Edit `src/contents/Skills.astro` (plain text rows grouped by category, no icons; `core: true` emphasises a skill). |
 | Change site title/description/author/URL | Edit `src/config.ts` **and** `site` in `astro.config.mjs` (they must match; sitemap uses the latter). |
 | New helper | `src/utils/<name>.helper.ts`, named exports, fully typed. |
 | New page / route | Do not add one without explicit instruction; this is intentionally a one-page site. |

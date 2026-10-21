@@ -1,25 +1,16 @@
 ---
 import Section from "@/components/Section.astro";
 
-import AngularIcon from "@/icons/angular-color.astro";
-import ReactIcon from "@/icons/react-color.astro";
-import TailwindIcon from "@/icons/tailwind-color.astro";
-import TypescriptIcon from "@/icons/typescript-color.astro";
-import NxIcon from "@/icons/nx.astro";
-import ClaudeCodeIcon from "@/icons/claude-code.astro";
-import AntigravityIcon from "@/icons/antigravity.astro";
-import CursorIcon from "@/icons/cursor.astro";
-
-// `core` skills render emphasised (bold, primary colour); an optional Icon shows beside any skill.
+// `core` skills render emphasised (bold, primary colour).
 // Everything is real text (comma separated) so ATS parsers read it as-is.
 const groups = [
   {
     title: "Frontend",
     skills: [
-      { name: "Angular", Icon: AngularIcon, core: true },
-      { name: "TypeScript", Icon: TypescriptIcon, core: true },
-      { name: "React", Icon: ReactIcon, core: true },
-      { name: "Tailwind CSS", Icon: TailwindIcon, core: true },
+      { name: "Angular", core: true },
+      { name: "TypeScript", core: true },
+      { name: "React", core: true },
+      { name: "Tailwind CSS", core: true },
       { name: "JavaScript" },
       { name: "Next.js" },
       { name: "Astro" },
@@ -28,25 +19,19 @@ const groups = [
   {
     title: "Mobile",
     skills: [
-      { name: "React Native", Icon: ReactIcon, core: true },
+      { name: "React Native", core: true },
+      { name: "NativeWind" },
       { name: "Capacitor" },
       { name: "Ionic" },
-      { name: "NativeWind" },
     ],
   },
   {
-    title: "Architecture",
+    title: "Architecture & state",
     skills: [
-      { name: "Nx", Icon: NxIcon, core: true },
+      { name: "Nx", core: true },
       { name: "Feature-Sliced Design" },
-    ],
-  },
-  {
-    title: "State & data",
-    skills: [
       { name: "TanStack Query" },
       { name: "Zustand" },
-      { name: "SignalR" },
     ],
   },
   {
@@ -55,15 +40,6 @@ const groups = [
       { name: "Node.js" },
       { name: "Docker" },
       { name: "Jenkins" },
-      { name: "Nginx" },
-    ],
-  },
-  {
-    title: "AI-assisted dev",
-    skills: [
-      { name: "Claude Code", Icon: ClaudeCodeIcon },
-      { name: "Antigravity", Icon: AntigravityIcon },
-      { name: "Cursor", Icon: CursorIcon },
     ],
   },
   {
@@ -71,6 +47,8 @@ const groups = [
     skills: [
       { name: "Git" },
       { name: "Figma" },
+      { name: "Claude Code" },
+      { name: "Antigravity" },
     ],
   },
 ];
@@ -79,16 +57,13 @@ const groups = [
 <Section title="Skills">
   <dl class="flex flex-col gap-2 mb-0 text-sm">
     {groups.map(({ title, skills }) => (
-      <div class="grid grid-cols-[8rem_1fr] gap-4 break-inside-avoid">
+      <div class="grid grid-cols-[9rem_1fr] gap-4 break-inside-avoid">
         <dt class="font-semibold text-neutral">{title}</dt>
 
         <dd class="m-0">
-          {skills.map(({ name, Icon, core }, index) => (
+          {skills.map(({ name, core }, index) => (
             <>
-              <span class:list={["inline-flex items-center gap-1 align-middle", core && "font-semibold text-primary"]}>
-                {Icon && <Icon />}
-                <span>{name}</span>
-              </span>{index < skills.length - 1 && ", "}
+              <span class:list={[core && "font-semibold text-primary"]}>{name}</span>{index < skills.length - 1 && ", "}
             </>
           ))}
         </dd>
